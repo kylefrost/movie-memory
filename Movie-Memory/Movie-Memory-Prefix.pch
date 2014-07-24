@@ -17,4 +17,5 @@
     #import <AVFoundation/AVFoundation.h>
     #import "AFNetworking.h"
     #import "UIApplication+SystemVersion.h"
+    #import "UIImage+Overlay.h"
 #endif

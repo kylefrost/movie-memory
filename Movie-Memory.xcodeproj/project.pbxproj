@@ -18,6 +18,16 @@
 		2792E181193109D2001FCE59 /* MMWatchedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2792E180193109D2001FCE59 /* MMWatchedTableViewController.m */; };
 		2792E184193109FE001FCE59 /* MMSettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2792E183193109FE001FCE59 /* MMSettingsTableViewController.m */; };
 		2792E18919311BEA001FCE59 /* MMTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2792E18819311BEA001FCE59 /* MMTableViewCell.m */; };
+		2799CF5A1981995A0058308B /* UIImage+Overlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 2799CF591981995A0058308B /* UIImage+Overlay.m */; };
+		2799CF5D19819AB50058308B /* UIColor+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = 2799CF5C19819AB50058308B /* UIColor+Custom.m */; };
+		2799CF631981B16B0058308B /* MMFirstOpenOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2799CF621981B16B0058308B /* MMFirstOpenOneViewController.m */; };
+		2799CF651981B1940058308B /* MMFirstOpenOneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2799CF641981B1940058308B /* MMFirstOpenOneViewController.xib */; };
+		2799CF671981B3590058308B /* MMFirstOpenTwoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2799CF661981B3590058308B /* MMFirstOpenTwoViewController.xib */; };
+		2799CF6A1981B3680058308B /* MMFirstOpenTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2799CF691981B3680058308B /* MMFirstOpenTwoViewController.m */; };
+		2799CF6C1981B6540058308B /* MMFirstOpenThreeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2799CF6B1981B6540058308B /* MMFirstOpenThreeViewController.xib */; };
+		2799CF6F1981B7410058308B /* MMFirstOpenThreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2799CF6E1981B7410058308B /* MMFirstOpenThreeViewController.m */; };
+		2799CF711981B7580058308B /* MMFirstOpenFourViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2799CF701981B7580058308B /* MMFirstOpenFourViewController.xib */; };
+		2799CF741981B7680058308B /* MMFirstOpenFourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2799CF731981B7680058308B /* MMFirstOpenFourViewController.m */; };
 		279E14341932F07700791DA7 /* MMSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 279E14331932F07700791DA7 /* MMSearchViewController.m */; };
 		27AB0B801935199100620A01 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 27AB0B5C1935199100620A01 /* AFHTTPRequestOperation.m */; };
 		27AB0B811935199100620A01 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 27AB0B5E1935199100620A01 /* AFHTTPRequestOperationManager.m */; };
@@ -88,6 +98,22 @@
 		2792E183193109FE001FCE59 /* MMSettingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMSettingsTableViewController.m; sourceTree = "<group>"; };
 		2792E18719311BEA001FCE59 /* MMTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMTableViewCell.h; sourceTree = "<group>"; };
 		2792E18819311BEA001FCE59 /* MMTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMTableViewCell.m; sourceTree = "<group>"; };
+		2799CF581981995A0058308B /* UIImage+Overlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Overlay.h"; sourceTree = "<group>"; };
+		2799CF591981995A0058308B /* UIImage+Overlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Overlay.m"; sourceTree = "<group>"; };
+		2799CF5B19819AB50058308B /* UIColor+Custom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Custom.h"; sourceTree = "<group>"; };
+		2799CF5C19819AB50058308B /* UIColor+Custom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Custom.m"; sourceTree = "<group>"; };
+		2799CF611981B16B0058308B /* MMFirstOpenOneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMFirstOpenOneViewController.h; sourceTree = "<group>"; };
+		2799CF621981B16B0058308B /* MMFirstOpenOneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMFirstOpenOneViewController.m; sourceTree = "<group>"; };
+		2799CF641981B1940058308B /* MMFirstOpenOneViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MMFirstOpenOneViewController.xib; sourceTree = "<group>"; };
+		2799CF661981B3590058308B /* MMFirstOpenTwoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MMFirstOpenTwoViewController.xib; sourceTree = "<group>"; };
+		2799CF681981B3680058308B /* MMFirstOpenTwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMFirstOpenTwoViewController.h; sourceTree = "<group>"; };
+		2799CF691981B3680058308B /* MMFirstOpenTwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMFirstOpenTwoViewController.m; sourceTree = "<group>"; };
+		2799CF6B1981B6540058308B /* MMFirstOpenThreeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MMFirstOpenThreeViewController.xib; sourceTree = "<group>"; };
+		2799CF6D1981B7410058308B /* MMFirstOpenThreeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMFirstOpenThreeViewController.h; sourceTree = "<group>"; };
+		2799CF6E1981B7410058308B /* MMFirstOpenThreeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMFirstOpenThreeViewController.m; sourceTree = "<group>"; };
+		2799CF701981B7580058308B /* MMFirstOpenFourViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MMFirstOpenFourViewController.xib; sourceTree = "<group>"; };
+		2799CF721981B7680058308B /* MMFirstOpenFourViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMFirstOpenFourViewController.h; sourceTree = "<group>"; };
+		2799CF731981B7680058308B /* MMFirstOpenFourViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMFirstOpenFourViewController.m; sourceTree = "<group>"; };
 		279E14321932F07700791DA7 /* MMSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMSearchViewController.h; sourceTree = "<group>"; };
 		279E14331932F07700791DA7 /* MMSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMSearchViewController.m; sourceTree = "<group>"; };
 		27AB0B5B1935199100620A01 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -216,6 +242,10 @@
 			children = (
 				278D5C99197A32BA00319825 /* UIApplication+SystemVersion.h */,
 				278D5C9A197A32BA00319825 /* UIApplication+SystemVersion.m */,
+				2799CF581981995A0058308B /* UIImage+Overlay.h */,
+				2799CF591981995A0058308B /* UIImage+Overlay.m */,
+				2799CF5B19819AB50058308B /* UIColor+Custom.h */,
+				2799CF5C19819AB50058308B /* UIColor+Custom.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -283,9 +313,69 @@
 			name = "Table View Cell Subclass";
 			sourceTree = "<group>";
 		};
+		279C6A5D19818BCB006D91F3 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				279C6A5E19818BD1006D91F3 /* First Open Views */,
+			);
+			name = "Custom Views";
+			sourceTree = "<group>";
+		};
+		279C6A5E19818BD1006D91F3 /* First Open Views */ = {
+			isa = PBXGroup;
+			children = (
+				279C6A5F19818BDA006D91F3 /* One */,
+				279C6A6019818BF6006D91F3 /* Two */,
+				279C6A6119818BFA006D91F3 /* Three */,
+				279C6A6219818BFE006D91F3 /* Four */,
+			);
+			name = "First Open Views";
+			sourceTree = "<group>";
+		};
+		279C6A5F19818BDA006D91F3 /* One */ = {
+			isa = PBXGroup;
+			children = (
+				2799CF641981B1940058308B /* MMFirstOpenOneViewController.xib */,
+				2799CF611981B16B0058308B /* MMFirstOpenOneViewController.h */,
+				2799CF621981B16B0058308B /* MMFirstOpenOneViewController.m */,
+			);
+			name = One;
+			sourceTree = "<group>";
+		};
+		279C6A6019818BF6006D91F3 /* Two */ = {
+			isa = PBXGroup;
+			children = (
+				2799CF661981B3590058308B /* MMFirstOpenTwoViewController.xib */,
+				2799CF681981B3680058308B /* MMFirstOpenTwoViewController.h */,
+				2799CF691981B3680058308B /* MMFirstOpenTwoViewController.m */,
+			);
+			name = Two;
+			sourceTree = "<group>";
+		};
+		279C6A6119818BFA006D91F3 /* Three */ = {
+			isa = PBXGroup;
+			children = (
+				2799CF6B1981B6540058308B /* MMFirstOpenThreeViewController.xib */,
+				2799CF6D1981B7410058308B /* MMFirstOpenThreeViewController.h */,
+				2799CF6E1981B7410058308B /* MMFirstOpenThreeViewController.m */,
+			);
+			name = Three;
+			sourceTree = "<group>";
+		};
+		279C6A6219818BFE006D91F3 /* Four */ = {
+			isa = PBXGroup;
+			children = (
+				2799CF701981B7580058308B /* MMFirstOpenFourViewController.xib */,
+				2799CF721981B7680058308B /* MMFirstOpenFourViewController.h */,
+				2799CF731981B7680058308B /* MMFirstOpenFourViewController.m */,
+			);
+			name = Four;
+			sourceTree = "<group>";
+		};
 		27AB0B591935198200620A01 /* 3rd Party */ = {
 			isa = PBXGroup;
 			children = (
+				27BD8FFE197B1FBE00D8C251 /* FXBlurView */,
 				27AB0B5A1935199100620A01 /* AFNetworking */,
 				27AB0B6E1935199100620A01 /* UIKit+AFNetworking */,
 			);
@@ -400,7 +490,7 @@
 		27E1249E193047520081A218 /* Movie-Memory */ = {
 			isa = PBXGroup;
 			children = (
-				27BD8FFE197B1FBE00D8C251 /* FXBlurView */,
+				279C6A5D19818BCB006D91F3 /* Custom Views */,
 				27BD8FF7197B1EF600D8C251 /* Custom Segues */,
 				278D5C98197A32A200319825 /* Categories */,
 				276799C1193662FB005AAB9E /* App Delegate */,
@@ -537,8 +627,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2799CF6C1981B6540058308B /* MMFirstOpenThreeViewController.xib in Resources */,
 				276799C0193655A1005AAB9E /* beep.wav in Resources */,
 				27E124B4193047520081A218 /* Images.xcassets in Resources */,
+				2799CF711981B7580058308B /* MMFirstOpenFourViewController.xib in Resources */,
+				2799CF651981B1940058308B /* MMFirstOpenOneViewController.xib in Resources */,
+				2799CF671981B3590058308B /* MMFirstOpenTwoViewController.xib in Resources */,
 				27E124A3193047520081A218 /* InfoPlist.strings in Resources */,
 				27E124AC193047520081A218 /* Main.storyboard in Resources */,
 			);
@@ -592,8 +686,10 @@
 			files = (
 				27AB0B801935199100620A01 /* AFHTTPRequestOperation.m in Sources */,
 				27DEDC56193523EC00C1C629 /* MMScanBarcodeViewController.m in Sources */,
+				2799CF6F1981B7410058308B /* MMFirstOpenThreeViewController.m in Sources */,
 				279E14341932F07700791DA7 /* MMSearchViewController.m in Sources */,
 				2792E184193109FE001FCE59 /* MMSettingsTableViewController.m in Sources */,
+				2799CF5D19819AB50058308B /* UIColor+Custom.m in Sources */,
 				278D5C9B197A32BA00319825 /* UIApplication+SystemVersion.m in Sources */,
 				27868D151930611200A965FF /* WatchedData.xcdatamodeld in Sources */,
 				27868D1819306EDD00A965FF /* MMAddManualViewController.m in Sources */,
@@ -609,15 +705,19 @@
 				27AB0B8F1935199100620A01 /* UIRefreshControl+AFNetworking.m in Sources */,
 				27AB0B861935199100620A01 /* AFURLRequestSerialization.m in Sources */,
 				27AB0B851935199100620A01 /* AFURLConnectionOperation.m in Sources */,
+				2799CF5A1981995A0058308B /* UIImage+Overlay.m in Sources */,
 				27BD9004197B20BA00D8C251 /* MMFirstOpenViewController.m in Sources */,
+				2799CF6A1981B3680058308B /* MMFirstOpenTwoViewController.m in Sources */,
 				27AB0B8C1935199100620A01 /* UIButton+AFNetworking.m in Sources */,
 				27AB0B8A1935199100620A01 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				27BD9001197B1FBE00D8C251 /* FXBlurView.m in Sources */,
 				27AB0B811935199100620A01 /* AFHTTPRequestOperationManager.m in Sources */,
 				2792E18919311BEA001FCE59 /* MMTableViewCell.m in Sources */,
+				2799CF631981B16B0058308B /* MMFirstOpenOneViewController.m in Sources */,
 				27BD8FFD197B1F3A00D8C251 /* MMFadeInSegue.m in Sources */,
 				27E124DC19304F7A0081A218 /* MMWatchedViewController.m in Sources */,
 				27AB0B841935199100620A01 /* AFSecurityPolicy.m in Sources */,
+				2799CF741981B7680058308B /* MMFirstOpenFourViewController.m in Sources */,
 				27E124A9193047520081A218 /* MMAppDelegate.m in Sources */,
 				27AB0B901935199100620A01 /* UIWebView+AFNetworking.m in Sources */,
 				27E124A5193047520081A218 /* main.m in Sources */,

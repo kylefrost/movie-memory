@@ -10,10 +10,11 @@
 
 @interface MMFirstOpenViewController ()
 
-@property (strong, nonatomic) UIView *firstView;
-@property (strong, nonatomic) UIView *secondView;
-@property (strong, nonatomic) UIView *thirdView;
-@property (strong, nonatomic) UIView *fourthView;
+// Views for Array
+@property (strong, nonatomic) UIViewController *oneView;
+@property (strong, nonatomic) UIViewController *twoView;
+@property (strong, nonatomic) UIViewController *threeView;
+@property (strong, nonatomic) UIViewController *fourView;
 
 @end
 
@@ -24,7 +25,7 @@
     
     [self setUpViews];
     
-    NSArray *viewArray = [NSArray arrayWithObjects:self.firstView, self.secondView, self.thirdView, self.fourthView, nil];
+    NSArray *viewArray = [NSArray arrayWithObjects:self.oneView, self.twoView, self.threeView, self.fourView, nil];
     
     self.pageControl.numberOfPages = viewArray.count;
     
@@ -35,7 +36,8 @@
         frame.origin.y = 0;
         frame.size = self.scrollView.frame.size;
         
-        UIView *subview = [viewArray objectAtIndex:i];
+        UIViewController *controller = [viewArray objectAtIndex:i];
+        UIView *subview = controller.view;
         
         subview.frame = frame;
         
@@ -64,29 +66,23 @@
 }
 
 - (void)setUpFirstView {
-    self.firstView = [[UIView alloc] initWithFrame:self.view.frame];
-    self.firstView.backgroundColor = [UIColor clearColor];
+    NSArray *nibs = [[NSBundle mainBundle] loadNibNamed:@"MMFirstOpenOneViewController" owner:self options:nil];
+    self.oneView = [nibs objectAtIndex:0];
 }
 
 - (void)setUpSecondView {
-    self.secondView = [[UIView alloc] initWithFrame:self.view.frame];
-    self.secondView.backgroundColor = [UIColor clearColor];
+    NSArray *nibs = [[NSBundle mainBundle] loadNibNamed:@"MMFirstOpenTwoViewController" owner:self options:nil];
+    self.twoView = [nibs objectAtIndex:0];
 }
 
 - (void)setUpThirdView {
-    self.thirdView = [[UIView alloc] initWithFrame:self.view.frame];
-    self.thirdView.backgroundColor = [UIColor clearColor];
+    NSArray *nibs = [[NSBundle mainBundle] loadNibNamed:@"MMFirstOpenThreeViewController" owner:self options:nil];
+    self.threeView = [nibs objectAtIndex:0];
 }
 
 - (void)setUpFourthView {
-    self.fourthView = [[UIView alloc] initWithFrame:self.view.frame];
-    self.fourthView.backgroundColor = [UIColor clearColor];
-    
-    UIButton *doneButton = [UIButton buttonWithType:UIButtonTypeSystem];
-    doneButton.frame = CGRectMake(self.view.bounds.size.width-55, 30, 45, 20);
-    [doneButton setTitle:@"Done" forState:UIControlStateNormal];
-    [doneButton addTarget:self action:@selector(dismissFirstOpenViewController) forControlEvents:UIControlEventTouchUpInside];
-    [self.fourthView addSubview:doneButton];
+    NSArray *nibs = [[NSBundle mainBundle] loadNibNamed:@"MMFirstOpenFourViewController" owner:self options:nil];
+    self.fourView = [nibs objectAtIndex:0];
 }
 
 #pragma mark - UIScrollViewDelegate
@@ -106,20 +102,5 @@
     frame.size = self.scrollView.frame.size;
     [self.scrollView scrollRectToVisible:frame animated:YES];
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
