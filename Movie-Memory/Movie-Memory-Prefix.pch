@@ -13,4 +13,8 @@
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
+    #import <CoreData/CoreData.h>
+    #import <AVFoundation/AVFoundation.h>
+    #import "AFNetworking.h"
+    #import "UIApplication+SystemVersion.h"
 #endif
