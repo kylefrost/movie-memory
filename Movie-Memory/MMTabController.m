@@ -33,7 +33,7 @@
     self.blurredView.blurRadius = 15.0;
     self.blurredView.alpha = 0;
     
-    [self performSegueWithIdentifier:@"openFirstOpen" sender:self];
+    // [self performSegueWithIdentifier:@"openFirstOpen" sender:self];
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     if ([defaults boolForKey:@"isFirstOpen"]) {

@@ -40,7 +40,6 @@
                         <segue destination="HbX-6U-lyJ" kind="modal" identifier="addManual" modalTransitionStyle="coverVertical" id="CM7-7k-OBv"/>
                         <segue destination="dwv-sQ-JiE" kind="modal" identifier="scanBarcode" modalTransitionStyle="coverVertical" id="LOR-ZK-uOp"/>
                         <segue destination="HbX-6U-lyJ" kind="modal" identifier="addScannedMovie" modalTransitionStyle="coverVertical" id="Rqw-hW-0TV"/>
-                        <segue destination="By8-SX-VVH" kind="custom" identifier="openFirstOpen" customClass="MMFadeInSegue" id="A6G-WQ-Z2n"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FNP-y4-bzi" sceneMemberID="firstResponder"/>

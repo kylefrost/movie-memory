@@ -47,7 +47,13 @@
     self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width * viewArray.count, self.scrollView.frame.size.height);
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dismissFirstOpenViewController) name:@"dismissFirstOpenViewController" object:nil];
+}
+
 - (void)dismissFirstOpenViewController {
+    
+    NSLog(@"Dismiss got called");
     
     [UIView animateWithDuration:0.5 animations:^{
         self.tabController.blurredView.alpha = 0;

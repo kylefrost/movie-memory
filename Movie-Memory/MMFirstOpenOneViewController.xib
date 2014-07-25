@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6185.11" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6190.4"/>
     </dependencies>
     <objects>
@@ -16,29 +15,59 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LABEL, YO" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YJD-LL-G0k">
-                        <rect key="frame" x="117" y="205" width="86" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to Movie Memory!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="292" translatesAutoresizingMaskIntoConstraints="NO" id="YJD-LL-G0k">
+                        <rect key="frame" x="14" y="67" width="292" height="120"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="43"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dmi-V4-u01">
-                        <rect key="frame" x="80" y="293" width="160" height="30"/>
-                        <state key="normal" title="TWITTER BUTTON, YO">
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="We need to take care of a few things, but first, share your purchase with friends!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="220" translatesAutoresizingMaskIntoConstraints="NO" id="mAN-Lk-EIi">
+                        <rect key="frame" x="50" y="172" width="220" height="115"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oU4-Zp-Gj9">
+                        <rect key="frame" x="177" y="326" width="113" height="53"/>
+                        <state key="normal" backgroundImage="twitter_button">
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
+                        <state key="highlighted" backgroundImage="twitter_button_pressed"/>
                         <connections>
-                            <action selector="pressTwitterButton:" destination="319-cr-swX" eventType="touchUpInside" id="8oh-O5-rGc"/>
+                            <action selector="pressTwitterButton:" destination="319-cr-swX" eventType="touchUpInside" id="d6e-d4-jH3"/>
                         </connections>
                     </button>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ee3-FU-cUB">
+                        <rect key="frame" x="31" y="326" width="113" height="53"/>
+                        <state key="normal" backgroundImage="facebook_button">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <state key="highlighted" backgroundImage="facebook_button_pressed"/>
+                        <connections>
+                            <action selector="pressFacebookButton:" destination="319-cr-swX" eventType="touchUpInside" id="yiu-tV-fpT"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Swipe left to continue." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EZa-Wj-cwy">
+                        <rect key="frame" x="74" y="428" width="172" height="21"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
             </view>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <size key="freeformSize" width="320" height="568"/>
             <connections>
-                <outlet property="twitterButton" destination="Dmi-V4-u01" id="Jhg-0H-fZ5"/>
+                <outlet property="facebookButton" destination="Ee3-FU-cUB" id="BGS-rb-olg"/>
+                <outlet property="twitterButton" destination="oU4-Zp-Gj9" id="i75-iA-zno"/>
             </connections>
-            <point key="canvasLocation" x="702" y="347"/>
+            <point key="canvasLocation" x="606" y="285"/>
         </viewController>
     </objects>
+    <resources>
+        <image name="facebook_button" width="113" height="53"/>
+        <image name="facebook_button_pressed" width="113" height="53"/>
+        <image name="twitter_button" width="113" height="53"/>
+        <image name="twitter_button_pressed" width="113" height="53"/>
+    </resources>
 </document>

@@ -10,6 +10,9 @@
 
 @interface MMFirstOpenTwoViewController ()
 
+@property (strong, nonatomic) IBOutlet UIButton *yesButton;
+@property (strong, nonatomic) IBOutlet UIButton *noButton;
+
 @end
 
 @implementation MMFirstOpenTwoViewController
@@ -19,19 +22,20 @@
     // Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)pressYesButton:(id)sender {
+    [self.yesButton setBackgroundImage:[[UIImage imageNamed:@"yes_button_pressed"] imageWithOverlayColor:[UIColor greenColor]] forState:UIControlStateNormal];
+    [self.noButton setBackgroundImage:[UIImage imageNamed:@"no_button"] forState:UIControlStateNormal];
+    
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"sendAnonymousData"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)pressNoButton:(id)sender {
+    [self.noButton setBackgroundImage:[[UIImage imageNamed:@"no_button_pressed"] imageWithOverlayColor:[UIColor redColor]] forState:UIControlStateNormal];
+    [self.yesButton setBackgroundImage:[UIImage imageNamed:@"yes_button"] forState:UIControlStateNormal];
+    
+    [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"sendAnonymousData"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
 }
-*/
 
 @end

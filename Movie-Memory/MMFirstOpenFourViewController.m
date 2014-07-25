@@ -7,8 +7,11 @@
 //
 
 #import "MMFirstOpenFourViewController.h"
+#import "MMFirstOpenViewController.h"
 
 @interface MMFirstOpenFourViewController ()
+
+@property (strong, nonatomic) MMFirstOpenViewController *controller;
 
 @end
 
@@ -17,21 +20,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.controller = [[MMFirstOpenViewController alloc] init];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)pressDoneButton:(id)sender {
+    // [self.controller dismissFirstOpenViewController];
+    
+    [UIView animateWithDuration:0.5 animations:^{
+        self.controller.tabController.blurredView.alpha = 0;
+        self.controller.view.alpha = 0;
+        
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"dismissFirstOpen" object:nil];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"removeFirstOpenBlur" object:nil];
+    } completion:^(BOOL finished){
+        //[[NSNotificationCenter defaultCenter] postNotificationName:@"dismissFirstOpen" object:nil];
+        //[[NSNotificationCenter defaultCenter] postNotificationName:@"removeFirstOpenBlur" object:nil];
+    }];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
