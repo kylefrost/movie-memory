@@ -71,6 +71,8 @@
 
 -(void)viewDidAppear:(BOOL)animated {
     
+    NSLog(@"ViewDidAppear Called");
+    
     // Load the tableView with information from the Core Data movies
     NSManagedObjectContext *managedContext = [self managedObjectContext];
     NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:@"Movie"];
@@ -81,6 +83,8 @@
 
 -(void)viewWillAppear:(BOOL)animated {
     
+    NSLog(@"ViewWillAppear Run");
+    
     // Run ViewDidAppear in order to update information in TableView before the user sees the view
     [self viewDidAppear:YES];
     
@@ -90,6 +94,11 @@
     } else {
         self.navigationItem.rightBarButtonItem = self.editButtonItem;
     }
+}
+
+-(void)updateTableView {
+    NSLog(@"updateTableView ran");
+    [self viewWillAppear:YES];
 }
 
 -(void)didReceiveMemoryWarning {

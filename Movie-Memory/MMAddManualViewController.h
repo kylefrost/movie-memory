@@ -9,11 +9,20 @@
 #import <UIKit/UIKit.h>
 #import "MMSearchViewController.h"
 
+// Delegate
+@protocol MMAddManualViewControllerDelegate <NSObject>
+
+-(void)updateTableView;
+
+@end
+
 @interface MMAddManualViewController : UIViewController <UIAlertViewDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate, UITextViewDelegate, UINavigationBarDelegate> {
     // TextView of the comment section
     UITextView *commentSection;
-    
 }
+
+// Delegate
+@property (strong, nonatomic) id<MMAddManualViewControllerDelegate> delegate;
 
 // Properties of the navigation bar
 @property (weak, nonatomic) IBOutlet UINavigationBar *addManualBar;

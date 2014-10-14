@@ -10,29 +10,29 @@
 	<string>Movie-Memory</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>026E23C0-F2F7-494B-A53F-6D9FA2948D04</key>
+		<key>9185526DCE4D76ED232E7F9C71FE594288413D07</key>
 		<string>ssh://bitbucket.org/kylefrost/movie-memory.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Movie-Memory.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>026E23C0-F2F7-494B-A53F-6D9FA2948D04</key>
+		<key>9185526DCE4D76ED232E7F9C71FE594288413D07</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>ssh://bitbucket.org/kylefrost/movie-memory.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>026E23C0-F2F7-494B-A53F-6D9FA2948D04</string>
+	<string>9185526DCE4D76ED232E7F9C71FE594288413D07</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>026E23C0-F2F7-494B-A53F-6D9FA2948D04</string>
+			<string>9185526DCE4D76ED232E7F9C71FE594288413D07</string>
 			<key>IDESourceControlWCCName</key>
 			<string>Movie-Memory</string>
 		</dict>

@@ -37,7 +37,7 @@
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     if ([defaults boolForKey:@"isFirstOpen"]) {
-        [self performSegueWithIdentifier:@"openFirstOpen" sender:self];
+        // [self performSegueWithIdentifier:@"openFirstOpen" sender:self];
         [defaults setBool:NO forKey:@"isFirstOpen"];
         [defaults setBool:NO forKey:@"autoAddSwitch"];
     }

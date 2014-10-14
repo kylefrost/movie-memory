@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6185.11" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="8YX-ce-x5E">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A361c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8YX-ce-x5E">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6190.4"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -13,15 +13,17 @@
                         <viewControllerLayoutGuide type="bottom" id="vGm-Z0-LOZ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Xeg-Qy-JjP">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" enabled="NO" title="" id="yn7-XX-awi"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="600"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b20-en-Ass" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-590" y="-546"/>
+            <point key="canvasLocation" x="-1106.25" y="-576.76056338028161"/>
         </scene>
         <!--Tab Controller-->
         <scene sceneID="Vex-rW-GRa">
@@ -29,6 +31,8 @@
                 <tabBarController id="8YX-ce-x5E" customClass="MMTabController" sceneMemberID="viewController">
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <nil key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="600"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="JQR-rB-NYL">
                         <rect key="frame" x="0.0" y="431" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -37,26 +41,26 @@
                         <segue destination="MIj-T9-zjp" kind="relationship" relationship="viewControllers" id="WhF-9E-ZBn"/>
                         <segue destination="nhl-B7-pPf" kind="relationship" relationship="viewControllers" id="vp8-5f-cmE"/>
                         <segue destination="qCT-ei-V9n" kind="relationship" relationship="viewControllers" id="HII-nL-NAT"/>
-                        <segue destination="HbX-6U-lyJ" kind="modal" identifier="addManual" modalTransitionStyle="coverVertical" id="CM7-7k-OBv"/>
-                        <segue destination="dwv-sQ-JiE" kind="modal" identifier="scanBarcode" modalTransitionStyle="coverVertical" id="LOR-ZK-uOp"/>
-                        <segue destination="HbX-6U-lyJ" kind="modal" identifier="addScannedMovie" modalTransitionStyle="coverVertical" id="Rqw-hW-0TV"/>
+                        <segue destination="HbX-6U-lyJ" kind="presentation" identifier="addManual" modalTransitionStyle="coverVertical" id="CM7-7k-OBv"/>
+                        <segue destination="dwv-sQ-JiE" kind="presentation" identifier="scanBarcode" modalTransitionStyle="coverVertical" id="LOR-ZK-uOp"/>
+                        <segue destination="HbX-6U-lyJ" kind="presentation" identifier="addScannedMovie" modalTransitionStyle="coverVertical" id="Rqw-hW-0TV"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FNP-y4-bzi" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-590" y="206"/>
+            <point key="canvasLocation" x="-1106.25" y="217.6056338028169"/>
         </scene>
         <!--Movie Memory-->
         <scene sceneID="w4A-6x-XNZ">
             <objects>
                 <tableViewController id="sPs-Da-XS8" customClass="MMWatchedTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="22" sectionFooterHeight="22" id="w8o-p8-wKl">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="sectionIndexColor" red="0.92156862750000001" green="0.1960784314" blue="0.19215686269999999" alpha="1" colorSpace="deviceRGB"/>
                         <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Search Watched" id="ZUb-3d-19R">
-                            <rect key="frame" x="0.0" y="64" width="320" height="44"/>
+                            <rect key="frame" x="0.0" y="64" width="600" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <color key="tintColor" red="0.92156862750000001" green="0.1960784314" blue="0.19215686269999999" alpha="1" colorSpace="deviceRGB"/>
                             <textInputTraits key="textInputTraits"/>
@@ -110,7 +114,7 @@
                                     <outlet property="releaseLabel" destination="ygD-58-c9f" id="ATQ-WN-QBO"/>
                                     <outlet property="titleLabel" destination="sxh-HF-bnd" id="tek-bK-pz4"/>
                                     <outlet property="watchedLabel" destination="Mkk-Wz-AiG" id="rFn-ZC-h6L"/>
-                                    <segue destination="HbX-6U-lyJ" kind="modal" identifier="EditMovie" modalTransitionStyle="coverVertical" id="tTH-wR-8LT"/>
+                                    <segue destination="HbX-6U-lyJ" kind="presentation" identifier="EditMovie" modalTransitionStyle="coverVertical" id="tTH-wR-8LT"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -135,7 +139,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="333" y="-171"/>
+            <point key="canvasLocation" x="624.375" y="-180.63380281690141"/>
         </scene>
         <!--Add Manual View Controller-->
         <scene sceneID="J98-s7-ySn">
@@ -146,7 +150,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Eqw-4D-pbm"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="DQj-Kr-oNs">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="hZH-AT-AeN">
@@ -310,12 +314,12 @@
                         <outlet property="starButton" destination="yeL-hA-1lN" id="ZmN-uh-jIP"/>
                         <outlet property="titleField" destination="07h-DE-CQb" id="JQq-Qt-Mcc"/>
                         <outlet property="watchedLabel" destination="dzz-8X-uCU" id="ZZy-pb-2Gp"/>
-                        <segue destination="rV5-t6-nNx" kind="modal" identifier="LoadSearch" modalTransitionStyle="coverVertical" id="1oa-5E-o0B"/>
+                        <segue destination="rV5-t6-nNx" kind="presentation" identifier="LoadSearch" modalTransitionStyle="coverVertical" id="1oa-5E-o0B"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ymu-pc-bwA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="861" y="-171"/>
+            <point key="canvasLocation" x="1614.375" y="-180.63380281690141"/>
         </scene>
         <!--Search View Controller-->
         <scene sceneID="NKC-Zg-DV4">
@@ -326,7 +330,7 @@
                         <viewControllerLayoutGuide type="bottom" id="bZR-Fb-MFi"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Hi4-oR-Nec">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="57f-PK-PoP">
@@ -376,14 +380,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="30V-pY-RAl" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="So5-5F-hYL"/>
             </objects>
-            <point key="canvasLocation" x="1333" y="-171"/>
+            <point key="canvasLocation" x="2499.375" y="-180.63380281690141"/>
         </scene>
         <!--Settings-->
         <scene sceneID="riC-nK-RKW">
             <objects>
                 <tableViewController id="c9T-yl-Uau" customClass="MMSettingsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="9au-js-tNR">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
@@ -524,7 +528,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SWm-Jf-1Xp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="333" y="516"/>
+            <point key="canvasLocation" x="624.375" y="545.07042253521126"/>
         </scene>
         <!--Scan Barcode View Controller-->
         <scene sceneID="1T1-3q-olA">
@@ -535,7 +539,7 @@
                         <viewControllerLayoutGuide type="bottom" id="HxN-Ju-kf9"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="XAW-oA-5PB">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YM6-wk-Py7">
@@ -561,12 +565,12 @@
                         <outlet property="cancel" destination="YM6-wk-Py7" id="FWl-dn-r76"/>
                         <outlet property="findingBarcode" destination="Ztq-yg-WSP" id="CwU-rZ-BJp"/>
                         <outlet property="indicatorBackground" destination="usI-fe-7cp" id="a6z-Fb-P9I"/>
-                        <segue destination="HbX-6U-lyJ" kind="modal" identifier="addScannedMovie" modalTransitionStyle="coverVertical" id="PzL-NO-3vV"/>
+                        <segue destination="HbX-6U-lyJ" kind="presentation" identifier="addScannedMovie" modalTransitionStyle="coverVertical" id="PzL-NO-3vV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vma-f4-GRz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="861" y="516"/>
+            <point key="canvasLocation" x="1614.375" y="545.07042253521126"/>
         </scene>
         <!--First Open View Controller-->
         <scene sceneID="tWO-Sc-PtA">
@@ -577,7 +581,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Rlf-tj-yIV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="BCz-Vb-ZDL">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L84-Tz-J6n">
@@ -587,7 +591,7 @@
                                 </connections>
                             </scrollView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="W9P-tw-aUN">
-                                <rect key="frame" x="126" y="512" width="67" height="37"/>
+                                <rect key="frame" x="126" y="544" width="67" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="67" id="cn4-IC-KOK"/>
                                 </constraints>
@@ -608,13 +612,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ogR-eO-zK3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-590" y="963"/>
+            <point key="canvasLocation" x="-1106.25" y="1017.2535211267605"/>
         </scene>
         <!--Settings-->
         <scene sceneID="YYU-Wx-gf2">
             <objects>
                 <navigationController definesPresentationContext="YES" id="qCT-ei-V9n" customClass="MMSettingsViewController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Settings" image="settings_icon" id="2cf-BJ-eYa"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="600"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Bwu-jf-4NI">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -624,13 +630,15 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YmA-Yv-4Zn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-93" y="516"/>
+            <point key="canvasLocation" x="-174.375" y="545.07042253521126"/>
         </scene>
         <!--Watched-->
         <scene sceneID="ZUE-Gu-NDe">
             <objects>
                 <navigationController definesPresentationContext="YES" id="MIj-T9-zjp" customClass="MMWatchedViewController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Watched" image="movie_reel_icon" id="15M-Pm-wS8"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="600"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="roC-Js-6Iw">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -645,7 +653,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wye-yb-IHM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-93" y="-171"/>
+            <point key="canvasLocation" x="-174.375" y="-180.63380281690141"/>
         </scene>
     </scenes>
     <resources>
@@ -658,16 +666,8 @@
         <image name="tap_to_change" width="51" height="27"/>
         <image name="title_field_background" width="237" height="30"/>
     </resources>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4">
-            <size key="portraitSize" width="320" height="568"/>
-            <size key="landscapeSize" width="568" height="320"/>
-        </simulatedScreenMetrics>
-    </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="CM7-7k-OBv"/>
+        <segue reference="Rqw-hW-0TV"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>

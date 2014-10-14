@@ -7,6 +7,7 @@
 //
 
 #import "MMAddManualViewController.h"
+#import "MMWatchedTableViewController.h"
 
 @interface MMAddManualViewController () {
     // Date picker for the alertview that shows when date is tapped
@@ -140,6 +141,7 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     // Add notification observers for if the keyboard is hidden or showing in order to move view for comments section
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(keyboardWillShow)
@@ -159,6 +161,7 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self
                                                     name:UIKeyboardWillHideNotification
                                                   object:nil];
+    [self.delegate updateTableView];
 }
 
 -(void)addBarcodeTitle {
@@ -336,8 +339,14 @@
         NSLog(@"Save failed!\nError: %@\nDescription: %@", error, [error localizedDescription]);
     }
     
+    [self viewWillAppear:YES];
+    
+    MMWatchedTableViewController *controller = [[MMWatchedTableViewController alloc] init];
+    
+    [controller updateTableView];
+    
     // Dismiss view after saving is done
-    [self dismissViewControllerAnimated:YES completion:NULL];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 -(IBAction)pressCancel:(id)sender {
