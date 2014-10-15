@@ -39,6 +39,7 @@
 
 -(void)viewDidLoad {
     [super viewDidLoad];
+    
     // Right BarButtonItem is edit button to edit movie list
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
     [self.tableView reloadData];
@@ -66,6 +67,12 @@
         // Set the destination as the selected movie and open the movie
         MMAddManualViewController *destination = segue.destinationViewController;
         destination.movies = selectedMovie;
+    }
+    else if ([[segue identifier] isEqualToString:@"addManual"]) {
+        MMAddManualViewController *destination = segue.destinationViewController;
+        destination.myDelegate = self;
+        
+        [self addChildViewController:segue.destinationViewController];
     }
     
 }
@@ -97,8 +104,9 @@
     }
 }
 
--(void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
+- (void)updateTableView {
+    NSLog(@"I got called.\n\nself.tableView is: %@", self.tableView);
+    [self.tableView reloadData];
 }
 
 #pragma mark - Table view data source

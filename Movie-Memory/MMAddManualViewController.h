@@ -19,10 +19,11 @@
 @interface MMAddManualViewController : UIViewController <UIAlertViewDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate, UITextViewDelegate, UINavigationBarDelegate> {
     // TextView of the comment section
     UITextView *commentSection;
+    id myDelegate;
 }
 
 // Delegate
-@property (strong, nonatomic) id<MMAddManualViewControllerDelegate> delegate;
+@property (strong, nonatomic) id<MMAddManualViewControllerDelegate> myDelegate;
 
 // Properties of the navigation bar
 @property (weak, nonatomic) IBOutlet UINavigationBar *addManualBar;

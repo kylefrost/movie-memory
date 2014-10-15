@@ -27,6 +27,7 @@
 @synthesize watchedLabel = _watchedLabel;
 @synthesize commentSection = _commentSection;
 @synthesize movieName = _movieName;
+@synthesize myDelegate = _myDelegate;
 
 @synthesize movies = _movies;
 
@@ -175,7 +176,7 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self
                                                     name:UIKeyboardWillHideNotification
                                                   object:nil];
-    [self.delegate updateTableView];
+    [self.myDelegate updateTableView];
 }
 
 -(void)addBarcodeTitle {
@@ -353,9 +354,14 @@
         NSLog(@"Save failed!\nError: %@\nDescription: %@", error, [error localizedDescription]);
     }
     
-    [self viewWillAppear:YES];
+    [self.myDelegate updateTableView];
     
+    UINavigationController *navController = self.presentingViewController.childViewControllers[0];
+    UITableViewController *tableController = navController.childViewControllers[0];
+    [tableController.tableView reloadData];
+    NSLog(@"%@", tableController.tableView);
     
+    [self viewWillAppear:NO];
     // Dismiss view after saving is done
     [self dismissViewControllerAnimated:YES completion:nil];
 }

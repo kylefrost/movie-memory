@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "MMAddManualViewController.h"
 
-@interface MMWatchedTableViewController : UITableViewController
+@interface MMWatchedTableViewController : UITableViewController <MMAddManualViewControllerDelegate>
 
 // Array for the movies that have been saved in Core Data
 @property (strong) NSMutableArray *movies;
