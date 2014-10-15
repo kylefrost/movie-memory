@@ -41,6 +41,7 @@
     [super viewDidLoad];
     // Right BarButtonItem is edit button to edit movie list
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self.tableView reloadData];
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -86,7 +87,7 @@
     NSLog(@"ViewWillAppear Run");
     
     // Run ViewDidAppear in order to update information in TableView before the user sees the view
-    [self viewDidAppear:YES];
+    [self viewDidAppear:animated];
     
     // If there aren't any movies, don't show the edit button
     if (_movies.count == 0) {
@@ -94,11 +95,6 @@
     } else {
         self.navigationItem.rightBarButtonItem = self.editButtonItem;
     }
-}
-
--(void)updateTableView {
-    NSLog(@"updateTableView ran");
-    [self viewWillAppear:YES];
 }
 
 -(void)didReceiveMemoryWarning {

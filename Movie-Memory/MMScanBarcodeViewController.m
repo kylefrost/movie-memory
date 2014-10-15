@@ -140,6 +140,9 @@
     [self.view bringSubviewToFront:self.findingBarcode];
     [self.findingBarcode startAnimating];
     self.findingBarcode.hidden = NO;
+    self.indicatorBackground.layer.backgroundColor = [UIColor blackColor].CGColor;
+    self.indicatorBackground.layer.opacity = 0.5f;
+    self.indicatorBackground.layer.cornerRadius = self.indicatorBackground.bounds.size.width/2;
     self.indicatorBackground.hidden = NO;
     
     // Set the URL for the JSON information that needs to be found

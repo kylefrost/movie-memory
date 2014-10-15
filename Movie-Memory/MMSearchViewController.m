@@ -7,6 +7,7 @@
 //
 
 #import "MMSearchViewController.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface MMSearchViewController () {
     MMAddManualViewController *controller;
@@ -73,8 +74,8 @@
         // Get the URL of the image and set the image as the data found
         NSString *imgURL = [NSString stringWithFormat:@"document.elementFromPoint(%f, %f).src", touchPoint.x, touchPoint.y];
         NSString *urlToSave = [self.searchView stringByEvaluatingJavaScriptFromString:imgURL];
-        NSURL * imageURL = [NSURL URLWithString:urlToSave];
-        NSData * imageData = [NSData dataWithContentsOfURL:imageURL];
+        NSURL *imageURL = [NSURL URLWithString:urlToSave];
+        NSData *imageData = [NSData dataWithContentsOfURL:imageURL];
         savedImage = [UIImage imageWithData:imageData];
         
         // Show action sheet asking user what they want to do with the image
@@ -111,6 +112,9 @@
     // Start the activity indicator to show that loading is happenning
     [self.activityIndicator startAnimating];
     [self.activityIndicator setHidden:NO];
+    self.indicatorBackground.layer.backgroundColor = [UIColor blackColor].CGColor;
+    self.indicatorBackground.layer.opacity = 0.5f;
+    self.indicatorBackground.layer.cornerRadius = self.indicatorBackground.bounds.size.width/2;
     [self.indicatorBackground setHidden:NO];
     
     // Determine which page to load, cover or year search

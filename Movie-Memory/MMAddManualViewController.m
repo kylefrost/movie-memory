@@ -84,6 +84,7 @@
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
         [dateFormatter setDateFormat:@"M/d/yyyy"];
         self.watchedLabel.text = [NSString stringWithFormat:@"%@", [dateFormatter stringFromDate:[NSDate date]]];
+        [self.titleField becomeFirstResponder];
     }
     
     // Set ALL the delegates
@@ -354,9 +355,6 @@
     
     [self viewWillAppear:YES];
     
-    MMWatchedTableViewController *controller = [[MMWatchedTableViewController alloc] init];
-    
-    [controller updateTableView];
     
     // Dismiss view after saving is done
     [self dismissViewControllerAnimated:YES completion:nil];

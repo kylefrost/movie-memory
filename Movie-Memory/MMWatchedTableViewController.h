@@ -14,6 +14,4 @@
 // Array for the movies that have been saved in Core Data
 @property (strong) NSMutableArray *movies;
 
--(void)updateTableView;
-
 @end
