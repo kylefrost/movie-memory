@@ -31,6 +31,7 @@
 // Properties/Actions for the rating stars/label
 @property (weak, nonatomic) IBOutlet UILabel *ratingLabel;
 @property (weak, nonatomic) IBOutlet UIButton *starButton;
+@property (weak, nonatomic) IBOutlet UIButton *bigStarButton;
 -(IBAction)starsPressed:(id)sender;
 
 // Properties/Actions for the watched date option

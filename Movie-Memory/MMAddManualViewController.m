@@ -8,6 +8,7 @@
 
 #import "MMAddManualViewController.h"
 #import "MMWatchedTableViewController.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface MMAddManualViewController () {
     // Date picker for the alertview that shows when date is tapped
@@ -48,6 +49,18 @@
     self.addManualBar.delegate = self;
     self.addManualBar.barTintColor = [UIColor colorWithRed:0.890 green:0.100 blue:0.148 alpha:1.000];
     self.addManualBar.titleTextAttributes = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor], NSForegroundColorAttributeName, nil];
+    
+    // Button borders
+    UIView *starTopBorderView = [[UIView alloc] initWithFrame:CGRectMake(-5, 0, self.bigStarButton.frame.size.width+5, 1)];
+    UIView *starBottomBorderView = [[UIView alloc] initWithFrame:CGRectMake(-5, self.bigStarButton.frame.size.height-1, self.bigStarButton.frame.size.width+5, 1)];
+    starTopBorderView.backgroundColor = [UIColor lightGrayColor];
+    starBottomBorderView.backgroundColor = [UIColor lightGrayColor];
+    [self.bigStarButton addSubview:starTopBorderView];
+    [self.bigStarButton addSubview:starBottomBorderView];
+    
+    UIView *dateBottomBorderView = [[UIView alloc] initWithFrame:CGRectMake(-5, self.dateButton.frame.size.height-1, self.dateButton.frame.size.width+5, 1)];
+    dateBottomBorderView.backgroundColor = [UIColor lightGrayColor];
+    [self.dateButton addSubview:dateBottomBorderView];
     
     // If user selected a movie, load that info, if not, set up view for new/blank movie
     if (_movies) {
