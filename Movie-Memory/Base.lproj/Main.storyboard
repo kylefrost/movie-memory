@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="8YX-ce-x5E">
     <dependencies>
+        <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -162,13 +163,7 @@
                             <outlet property="delegate" destination="sPs-Da-XS8" id="sK2-y8-WPz"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Movie Memory" id="KAk-tE-j8G">
-                        <barButtonItem key="leftBarButtonItem" title="Reload" id="cpm-gy-TAm">
-                            <connections>
-                                <action selector="refreshTableView" destination="sPs-Da-XS8" id="Ifr-xo-ZIl"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Movie Memory" id="KAk-tE-j8G"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="600"/>
                     <connections>
@@ -715,6 +710,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Settings" id="kjJ-Xi-dlu">
+                        <barButtonItem key="leftBarButtonItem" title="Beta: Reset" id="O27-hK-PTE">
+                            <connections>
+                                <action selector="pressedResetButton:" destination="c9T-yl-Uau" id="VDz-1A-7g5"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="action" id="X2x-RB-iDn">
                             <connections>
                                 <action selector="pressShare:" destination="c9T-yl-Uau" id="pLY-vQ-DI4"/>
@@ -725,6 +725,7 @@
                         <outlet property="autoAddSwitch" destination="AOp-R7-Jea" id="f3f-fz-abC"/>
                         <outlet property="kyleFrostCell" destination="Jz3-Zp-0lU" id="1EF-Op-F8t"/>
                         <outlet property="moreAppsCell" destination="5Wc-c4-iIg" id="Dbk-mS-ZQK"/>
+                        <outlet property="resetFirstOpen" destination="O27-hK-PTE" id="VHr-3c-4Gb"/>
                         <outlet property="supportCell" destination="HQg-i3-C1q" id="hf6-cd-GWe"/>
                         <outlet property="usageDataSwitch" destination="E8K-Mw-PSM" id="lrN-e6-aw8"/>
                     </connections>

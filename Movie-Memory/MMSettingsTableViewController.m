@@ -11,6 +11,8 @@
 
 @interface MMSettingsTableViewController ()
 
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *resetFirstOpen;
+
 @end
 
 @implementation MMSettingsTableViewController
@@ -46,6 +48,10 @@
 -(void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)pressedResetButton:(id)sender {
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"isFirstOpen"];
 }
 
 #pragma mark - UISwitches

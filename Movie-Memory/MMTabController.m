@@ -29,8 +29,6 @@
 
     NSLog(@"Tab View has Loaded");
     
-    [self setUpFirstView];
-    
     // Add the center Add Button to TabBar
     [self addCenterButtonWithImage:[UIImage imageNamed:@"add_button"] highlightImage:nil];
     
@@ -40,10 +38,12 @@
     //[self performSegueWithIdentifier:@"openFirstOpen" sender:self];
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    if ([defaults boolForKey:@"isFirstOpen"]) {
+    if (![defaults boolForKey:@"isFirstOpen"]) {
+        [self setUpFirstView];
         // [self performSegueWithIdentifier:@"openFirstOpen" sender:self];
-        [defaults setBool:NO forKey:@"isFirstOpen"];
+        [defaults setBool:YES forKey:@"isFirstOpen"];
         [defaults setBool:NO forKey:@"autoAddSwitch"];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dismissFirstOpenViewController) name:@"dismissFirstOpen" object:nil];
     }
 }
 
