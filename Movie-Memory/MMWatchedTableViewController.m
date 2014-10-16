@@ -37,8 +37,23 @@
     return self;
 }
 
+-(void)loadMovies
+{
+    // Load the tableView with information from the Core Data movies
+    NSManagedObjectContext *managedContext = [self managedObjectContext];
+    NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:@"Movie"];
+    _movies = [[managedContext executeFetchRequest:request error:nil] mutableCopy];
+    [self.tableView reloadData];
+}
+
 -(void)viewDidLoad {
     [super viewDidLoad];
+
+    [self loadMovies];
+    [self updateTableView];
+    
+    // Notifications
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateTableView) name:@"updateTableView" object:nil];
     
     // Right BarButtonItem is edit button to edit movie list
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
@@ -79,24 +94,29 @@
 
 -(void)viewDidAppear:(BOOL)animated {
     
-    NSLog(@"ViewDidAppear Called");
+    //NSLog(@"ViewDidAppear Called");
     
     // Load the tableView with information from the Core Data movies
+
     NSManagedObjectContext *managedContext = [self managedObjectContext];
     NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:@"Movie"];
     _movies = [[managedContext executeFetchRequest:request error:nil] mutableCopy];
-    
     [self.tableView reloadData];
+    [self updateTableView];
 }
 
 -(void)viewWillAppear:(BOOL)animated {
     
-    NSLog(@"ViewWillAppear Run");
-    
     // Run ViewDidAppear in order to update information in TableView before the user sees the view
-    [self viewDidAppear:animated];
+    [self updateTableView];
     
     // If there aren't any movies, don't show the edit button
+}
+
+- (void)updateTableView {
+    NSLog(@"\n\n\nupdateTableView called.\n\nself.movies.count is: %lu\nself.movies is: %@\nself.tableView.subviews is: %@", (unsigned long)self.movies.count, self.movies, self.tableView.subviews);
+    [self loadMovies];
+    [self.tableView reloadData];
     if (_movies.count == 0) {
         self.navigationItem.rightBarButtonItem = nil;
     } else {
@@ -104,8 +124,8 @@
     }
 }
 
-- (void)updateTableView {
-    NSLog(@"I got called.\n\nself.tableView is: %@", self.tableView);
+- (IBAction)refreshTableView
+{
     [self.tableView reloadData];
 }
 

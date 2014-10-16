@@ -23,7 +23,7 @@
 }
 
 // Delegate
-@property (strong, nonatomic) id<MMAddManualViewControllerDelegate> myDelegate;
+@property (strong, nonatomic) IBOutlet id<MMAddManualViewControllerDelegate> myDelegate;
 
 // Properties of the navigation bar
 @property (weak, nonatomic) IBOutlet UINavigationBar *addManualBar;

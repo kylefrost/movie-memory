@@ -162,7 +162,13 @@
                             <outlet property="delegate" destination="sPs-Da-XS8" id="sK2-y8-WPz"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Movie Memory" id="KAk-tE-j8G"/>
+                    <navigationItem key="navigationItem" title="Movie Memory" id="KAk-tE-j8G">
+                        <barButtonItem key="leftBarButtonItem" title="Reload" id="cpm-gy-TAm">
+                            <connections>
+                                <action selector="refreshTableView" destination="sPs-Da-XS8" id="Ifr-xo-ZIl"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="600"/>
                     <connections>
@@ -848,7 +854,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="PzL-NO-3vV"/>
+        <segue reference="tTH-wR-8LT"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>

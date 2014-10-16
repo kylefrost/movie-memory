@@ -119,10 +119,7 @@
     }
     
     // Recieve notification to change the cover image if a user is coming from the search view and has selected to set the cover
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(searchViewControllerDismissed:)
-                                                 name:@"changeImage"
-                                               object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(searchViewControllerDismissed:) name:@"changeImage" object:nil];
 }
 
 -(void)addRating {
@@ -356,13 +353,21 @@
     
     [self.myDelegate updateTableView];
     
-    UINavigationController *navController = self.presentingViewController.childViewControllers[0];
-    UITableViewController *tableController = navController.childViewControllers[0];
+    UINavigationController *navController = [self.presentingViewController.childViewControllers objectAtIndex:0];
+    UITableViewController *tableController = [navController.childViewControllers objectAtIndex:0];
     [tableController.tableView reloadData];
     NSLog(@"%@", tableController.tableView);
     
     [self viewWillAppear:NO];
-    // Dismiss view after saving is done
+    
+    [self.myDelegate updateTableView];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"updateTableView" object:nil];
+    
+    [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(dismissView) userInfo:nil repeats:NO];
+}
+
+-(void)dismissView
+{
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
