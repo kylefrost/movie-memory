@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6185.11" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6190.4"/>
+        <deployment defaultVersion="1808" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -12,29 +13,49 @@
                 <viewControllerLayoutGuide type="bottom" id="4Kz-Wl-x87"/>
             </layoutGuides>
             <view key="view" contentMode="scaleToFill" id="nJi-y8-JIl">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Thanks, that's all for now." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="288" translatesAutoresizingMaskIntoConstraints="NO" id="ElL-Tr-PI5">
-                        <rect key="frame" x="16" y="72" width="288" height="117"/>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thanks, that's all for now." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="288" translatesAutoresizingMaskIntoConstraints="NO" id="ElL-Tr-PI5">
+                        <rect key="frame" x="156" y="71" width="288" height="117"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="288" id="7T5-T3-CaS"/>
+                        </constraints>
                         <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="44"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="That's all we needed to get you started with Movie Memory." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="236" translatesAutoresizingMaskIntoConstraints="NO" id="gTh-jD-vyV">
-                        <rect key="frame" x="42" y="203" width="236" height="58"/>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="That's all we needed to get you started with Movie Memory." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="236" translatesAutoresizingMaskIntoConstraints="NO" id="gTh-jD-vyV">
+                        <rect key="frame" x="182" y="202" width="236" height="58"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="58" id="RD1-yT-yE8"/>
+                            <constraint firstAttribute="width" constant="236" id="uSw-2v-3a6"/>
+                        </constraints>
                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enjoy!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7wI-ND-o40">
-                        <rect key="frame" x="138" y="269" width="44" height="21"/>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enjoy!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7wI-ND-o40">
+                        <rect key="frame" x="278" y="268" width="44" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="mzS-Wb-8ma"/>
+                        </constraints>
                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MT0-Em-k8O">
-                        <rect key="frame" x="121" y="433" width="79" height="41"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="movie_reel" translatesAutoresizingMaskIntoConstraints="NO" id="ucV-Yx-vbC">
+                        <rect key="frame" x="259" y="317" width="83" height="63"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="63" id="hEQ-54-fKz"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MT0-Em-k8O">
+                        <rect key="frame" x="261" y="419" width="79" height="41"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="79" id="SgV-0a-v5B"/>
+                            <constraint firstAttribute="height" constant="41" id="aDz-nn-AwS"/>
+                        </constraints>
                         <state key="normal" backgroundImage="done_button">
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
@@ -43,14 +64,27 @@
                             <action selector="pressDoneButton:" destination="bEM-UX-r6x" eventType="touchUpInside" id="Oub-VQ-iJf"/>
                         </connections>
                     </button>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="movie_reel" translatesAutoresizingMaskIntoConstraints="NO" id="ucV-Yx-vbC">
-                        <rect key="frame" x="119" y="329" width="83" height="63"/>
-                    </imageView>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="MT0-Em-k8O" firstAttribute="top" secondItem="ucV-Yx-vbC" secondAttribute="bottom" constant="39" id="1Nk-fX-3GO"/>
+                    <constraint firstItem="7wI-ND-o40" firstAttribute="centerX" secondItem="nJi-y8-JIl" secondAttribute="centerX" id="Bxe-1b-d1L"/>
+                    <constraint firstItem="ucV-Yx-vbC" firstAttribute="centerX" secondItem="7wI-ND-o40" secondAttribute="centerX" id="Cl5-GI-HqG"/>
+                    <constraint firstItem="gTh-jD-vyV" firstAttribute="centerX" secondItem="ElL-Tr-PI5" secondAttribute="centerX" id="Gta-sV-WRl"/>
+                    <constraint firstItem="4Kz-Wl-x87" firstAttribute="top" secondItem="MT0-Em-k8O" secondAttribute="bottom" constant="140" id="OVu-VY-1pc"/>
+                    <constraint firstItem="7wI-ND-o40" firstAttribute="centerX" secondItem="gTh-jD-vyV" secondAttribute="centerX" id="ScF-En-11W"/>
+                    <constraint firstItem="ucV-Yx-vbC" firstAttribute="top" secondItem="7wI-ND-o40" secondAttribute="bottom" constant="28" id="TEq-C4-n4e"/>
+                    <constraint firstItem="gTh-jD-vyV" firstAttribute="top" secondItem="ElL-Tr-PI5" secondAttribute="bottom" constant="14" id="avq-M1-fHK"/>
+                    <constraint firstItem="ucV-Yx-vbC" firstAttribute="centerX" secondItem="MT0-Em-k8O" secondAttribute="centerX" id="cbK-Vf-CMx"/>
+                    <constraint firstItem="ElL-Tr-PI5" firstAttribute="top" secondItem="o5d-zD-IM8" secondAttribute="bottom" constant="51" id="fE8-uu-fvD"/>
+                    <constraint firstItem="7wI-ND-o40" firstAttribute="top" secondItem="gTh-jD-vyV" secondAttribute="bottom" constant="8" symbolic="YES" id="wG6-As-c0Q"/>
+                </constraints>
             </view>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <size key="freeformSize" width="320" height="568"/>
-            <point key="canvasLocation" x="427" y="612"/>
+            <size key="freeformSize" width="600" height="600"/>
+            <connections>
+                <outlet property="done" destination="MT0-Em-k8O" id="JCL-JC-xM6"/>
+            </connections>
+            <point key="canvasLocation" x="519" y="535"/>
         </viewController>
     </objects>
     <resources>

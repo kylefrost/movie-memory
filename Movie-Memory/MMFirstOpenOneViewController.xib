@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6185.11" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6190.4"/>
+        <deployment defaultVersion="1808" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -12,23 +13,31 @@
                 <viewControllerLayoutGuide type="bottom" id="GF3-5T-LSS"/>
             </layoutGuides>
             <view key="view" contentMode="scaleToFill" id="qbx-YE-wZv">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to Movie Memory!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="292" translatesAutoresizingMaskIntoConstraints="NO" id="YJD-LL-G0k">
-                        <rect key="frame" x="14" y="67" width="292" height="120"/>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Movie Memory!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="292" translatesAutoresizingMaskIntoConstraints="NO" id="YJD-LL-G0k">
+                        <rect key="frame" x="154" y="97" width="292" height="120"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="120" id="ZH5-A5-nnp"/>
+                            <constraint firstAttribute="width" constant="292" id="sX0-Y7-bud"/>
+                        </constraints>
                         <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="43"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="We need to take care of a few things, but first, share your purchase with friends!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="220" translatesAutoresizingMaskIntoConstraints="NO" id="mAN-Lk-EIi">
-                        <rect key="frame" x="50" y="172" width="220" height="115"/>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We need to take care of a few things, but first, share your purchase with friends!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="220" translatesAutoresizingMaskIntoConstraints="NO" id="mAN-Lk-EIi">
+                        <rect key="frame" x="190" y="201" width="220" height="115"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oU4-Zp-Gj9">
-                        <rect key="frame" x="177" y="326" width="113" height="53"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oU4-Zp-Gj9">
+                        <rect key="frame" x="317" y="324" width="113" height="53"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="53" id="hZT-kn-YuF"/>
+                            <constraint firstAttribute="width" constant="113" id="lNz-4F-tgG"/>
+                        </constraints>
                         <state key="normal" backgroundImage="twitter_button">
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
@@ -37,8 +46,12 @@
                             <action selector="pressTwitterButton:" destination="319-cr-swX" eventType="touchUpInside" id="d6e-d4-jH3"/>
                         </connections>
                     </button>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ee3-FU-cUB">
-                        <rect key="frame" x="31" y="326" width="113" height="53"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ee3-FU-cUB">
+                        <rect key="frame" x="171" y="324" width="113" height="53"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="53" id="PMa-N6-xFK"/>
+                            <constraint firstAttribute="width" constant="113" id="dbe-gH-rjJ"/>
+                        </constraints>
                         <state key="normal" backgroundImage="facebook_button">
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
@@ -47,21 +60,39 @@
                             <action selector="pressFacebookButton:" destination="319-cr-swX" eventType="touchUpInside" id="yiu-tV-fpT"/>
                         </connections>
                     </button>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Swipe left to continue." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EZa-Wj-cwy">
-                        <rect key="frame" x="74" y="428" width="172" height="21"/>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe left to continue." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EZa-Wj-cwy">
+                        <rect key="frame" x="214" y="431" width="172" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="i68-s9-6qC"/>
+                            <constraint firstAttribute="width" constant="172" id="rii-cq-s34"/>
+                        </constraints>
                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <constraints>
+                    <constraint firstAttribute="centerX" secondItem="Ee3-FU-cUB" secondAttribute="centerX" constant="72.5" id="BoT-PY-8Oi"/>
+                    <constraint firstItem="mAN-Lk-EIi" firstAttribute="centerX" secondItem="EZa-Wj-cwy" secondAttribute="centerX" id="C72-Cj-9H1"/>
+                    <constraint firstItem="Ee3-FU-cUB" firstAttribute="top" secondItem="mAN-Lk-EIi" secondAttribute="bottom" constant="8" symbolic="YES" id="Dhz-W0-KEG"/>
+                    <constraint firstItem="EZa-Wj-cwy" firstAttribute="top" secondItem="Ee3-FU-cUB" secondAttribute="bottom" constant="54" id="OdM-7G-IKO"/>
+                    <constraint firstItem="oU4-Zp-Gj9" firstAttribute="leading" secondItem="Ee3-FU-cUB" secondAttribute="trailing" constant="33" id="TyK-tF-0Jm"/>
+                    <constraint firstItem="YJD-LL-G0k" firstAttribute="centerX" secondItem="mAN-Lk-EIi" secondAttribute="centerX" id="ZD8-lY-Ux5"/>
+                    <constraint firstItem="YJD-LL-G0k" firstAttribute="top" secondItem="JKQ-Vu-IxW" secondAttribute="bottom" constant="77" id="igN-4S-Oiv"/>
+                    <constraint firstItem="oU4-Zp-Gj9" firstAttribute="top" secondItem="Ee3-FU-cUB" secondAttribute="top" id="kH0-PK-yfE"/>
+                    <constraint firstAttribute="centerX" secondItem="YJD-LL-G0k" secondAttribute="centerX" id="ljC-Fp-6g6"/>
+                    <constraint firstItem="GF3-5T-LSS" firstAttribute="top" secondItem="EZa-Wj-cwy" secondAttribute="bottom" constant="148" id="xHJ-O4-qG2"/>
+                    <constraint firstAttribute="centerX" secondItem="oU4-Zp-Gj9" secondAttribute="centerX" constant="-73.5" id="xaS-24-BAp"/>
+                    <constraint firstItem="mAN-Lk-EIi" firstAttribute="top" secondItem="JKQ-Vu-IxW" secondAttribute="bottom" constant="181" id="yah-Rs-Pq7"/>
+                </constraints>
             </view>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <size key="freeformSize" width="320" height="568"/>
+            <size key="freeformSize" width="600" height="600"/>
             <connections>
                 <outlet property="facebookButton" destination="Ee3-FU-cUB" id="BGS-rb-olg"/>
                 <outlet property="twitterButton" destination="oU4-Zp-Gj9" id="i75-iA-zno"/>
             </connections>
-            <point key="canvasLocation" x="606" y="285"/>
+            <point key="canvasLocation" x="705" y="461"/>
         </viewController>
     </objects>
     <resources>

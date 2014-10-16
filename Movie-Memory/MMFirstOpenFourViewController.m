@@ -13,6 +13,8 @@
 
 @property (strong, nonatomic) MMFirstOpenViewController *controller;
 
+@property (strong, nonatomic) IBOutlet UIButton *done;
+
 @end
 
 @implementation MMFirstOpenFourViewController
@@ -21,6 +23,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.controller = [[MMFirstOpenViewController alloc] init];
+    
+    self.done.imageView.contentMode = UIViewContentModeScaleAspectFit;
 }
 
 - (IBAction)pressDoneButton:(id)sender {

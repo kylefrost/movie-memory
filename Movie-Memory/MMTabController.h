@@ -17,6 +17,10 @@
 
 // Blurred view for First Start screen
 @property (strong, nonatomic) FXBlurView *blurredView;
+@property (strong, nonatomic) UIScrollView *scrollView;
+@property (strong, nonatomic) UIPageControl *pageControl;
+
+- (void)dismissFirstOpenViewController;
 
 // String that is recieved from MMScanBarcodeViewController after it has dismissed
 @property (weak, nonatomic) NSString *movieName;

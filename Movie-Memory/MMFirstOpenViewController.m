@@ -27,7 +27,7 @@
     
     NSArray *viewArray = [NSArray arrayWithObjects:self.oneView, self.twoView, self.threeView, self.fourView, nil];
     
-    self.pageControl.numberOfPages = viewArray.count;
+    // self.pageControl.numberOfPages = viewArray.count;
     
     for (int i = 0; i < viewArray.count; i++) {
 

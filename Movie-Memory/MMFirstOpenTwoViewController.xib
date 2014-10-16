@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6185.11" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment defaultVersion="1808" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6190.4"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -13,17 +13,24 @@
                 <viewControllerLayoutGuide type="bottom" id="J7c-2z-Sbu"/>
             </layoutGuides>
             <view key="view" contentMode="scaleToFill" id="BRK-OL-w81">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Swipe left to continue." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WUU-yh-tqD">
-                        <rect key="frame" x="74" y="486" width="172" height="21"/>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe left to continue." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WUU-yh-tqD">
+                        <rect key="frame" x="214" y="502" width="172" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="172" id="6Yf-hr-UUK"/>
+                            <constraint firstAttribute="height" constant="21" id="dsP-SQ-bvA"/>
+                        </constraints>
                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Pg-al-MvC">
-                        <rect key="frame" x="20" y="359" width="135" height="60"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Pg-al-MvC">
+                        <rect key="frame" x="160" y="367" width="135" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="60" id="XR9-Qb-Fch"/>
+                        </constraints>
                         <state key="normal" backgroundImage="yes_button">
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
@@ -32,32 +39,37 @@
                             <action selector="pressYesButton:" destination="zAQ-dx-Kqp" eventType="touchUpInside" id="pJU-hB-4dC"/>
                         </connections>
                     </button>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="(You can change this later in settings.)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KfA-lw-rme">
-                        <rect key="frame" x="16" y="428" width="289" height="21"/>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(You can change this later in settings.)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KfA-lw-rme">
+                        <rect key="frame" x="156" y="435" width="289" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="KTt-8M-oHQ"/>
+                            <constraint firstAttribute="width" constant="289" id="ezh-5V-Hd0"/>
+                        </constraints>
                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="13"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Now on to the real stuff." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="246" translatesAutoresizingMaskIntoConstraints="NO" id="sqj-79-2BY">
-                        <rect key="frame" x="37" y="58" width="246" height="137"/>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Now on to the real stuff." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="246" translatesAutoresizingMaskIntoConstraints="NO" id="sqj-79-2BY">
+                        <rect key="frame" x="177" y="35" width="246" height="137"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="246" id="lri-CE-UgF"/>
+                        </constraints>
                         <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="44"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Can we send anonymous diagnostics data to the developers?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="273" translatesAutoresizingMaskIntoConstraints="NO" id="Mc6-I0-s3o">
-                        <rect key="frame" x="24" y="165" width="273" height="111"/>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It helps us make the app better, and it's always sent both anonymously and securely." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="242" translatesAutoresizingMaskIntoConstraints="NO" id="wER-3c-iWl">
+                        <rect key="frame" x="179" y="229" width="242" height="61"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="242" id="TVl-5g-Hwg"/>
+                            <constraint firstAttribute="height" constant="61" id="qF6-zH-QQE"/>
+                        </constraints>
                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="It helps us make the app better, and it's always sent both anonymously and securely." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="242" translatesAutoresizingMaskIntoConstraints="NO" id="wER-3c-iWl">
-                        <rect key="frame" x="39" y="264" width="242" height="61"/>
-                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nv0-If-vkK">
-                        <rect key="frame" x="165" y="359" width="135" height="60"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nv0-If-vkK">
+                        <rect key="frame" x="305" y="367" width="135" height="60"/>
                         <state key="normal" backgroundImage="no_button">
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
@@ -66,10 +78,38 @@
                             <action selector="pressNoButton:" destination="zAQ-dx-Kqp" eventType="touchUpInside" id="w3L-eT-NOr"/>
                         </connections>
                     </button>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Can we send anonymous diagnostics data to the developers?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="273" translatesAutoresizingMaskIntoConstraints="NO" id="Mc6-I0-s3o">
+                        <rect key="frame" x="164" y="146" width="273" height="111"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="273" id="Hgh-T1-mrH"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="KfA-lw-rme" firstAttribute="centerX" secondItem="wER-3c-iWl" secondAttribute="centerX" id="0RD-2s-zy9"/>
+                    <constraint firstItem="Mc6-I0-s3o" firstAttribute="centerX" secondItem="wER-3c-iWl" secondAttribute="centerX" id="1SM-mi-8P3"/>
+                    <constraint firstItem="6Pg-al-MvC" firstAttribute="top" secondItem="wER-3c-iWl" secondAttribute="bottom" constant="77" id="1dg-P1-e5p"/>
+                    <constraint firstItem="Mc6-I0-s3o" firstAttribute="top" secondItem="Mr1-Kb-Tfo" secondAttribute="bottom" constant="126" id="2pc-yc-wtR"/>
+                    <constraint firstItem="J7c-2z-Sbu" firstAttribute="top" secondItem="WUU-yh-tqD" secondAttribute="bottom" constant="77" id="35g-AM-txz"/>
+                    <constraint firstItem="KfA-lw-rme" firstAttribute="top" secondItem="6Pg-al-MvC" secondAttribute="bottom" constant="8" symbolic="YES" id="3es-xx-Lc6"/>
+                    <constraint firstItem="WUU-yh-tqD" firstAttribute="top" secondItem="KfA-lw-rme" secondAttribute="bottom" constant="46" id="4i0-Gv-iAg"/>
+                    <constraint firstItem="sqj-79-2BY" firstAttribute="top" secondItem="Mr1-Kb-Tfo" secondAttribute="bottom" constant="15" id="74U-nq-58g"/>
+                    <constraint firstAttribute="centerX" secondItem="Nv0-If-vkK" secondAttribute="centerX" constant="-72.5" id="AZ6-Ip-XD3"/>
+                    <constraint firstItem="WUU-yh-tqD" firstAttribute="centerX" secondItem="KfA-lw-rme" secondAttribute="centerX" id="S8b-JY-BF5"/>
+                    <constraint firstItem="Nv0-If-vkK" firstAttribute="leading" secondItem="6Pg-al-MvC" secondAttribute="trailing" constant="10" id="bzG-aQ-3vl"/>
+                    <constraint firstItem="Nv0-If-vkK" firstAttribute="top" secondItem="Mc6-I0-s3o" secondAttribute="bottom" constant="110" id="dsM-by-SKy"/>
+                    <constraint firstItem="6Pg-al-MvC" firstAttribute="top" secondItem="Nv0-If-vkK" secondAttribute="top" id="iqK-56-85g"/>
+                    <constraint firstItem="sqj-79-2BY" firstAttribute="centerX" secondItem="BRK-OL-w81" secondAttribute="centerX" id="lG6-08-Hkf"/>
+                    <constraint firstAttribute="centerX" secondItem="6Pg-al-MvC" secondAttribute="centerX" constant="72.5" id="r3B-3u-3mp"/>
+                    <constraint firstItem="sqj-79-2BY" firstAttribute="centerX" secondItem="Mc6-I0-s3o" secondAttribute="centerX" id="un9-1u-O18"/>
+                    <constraint firstItem="wER-3c-iWl" firstAttribute="top" secondItem="sqj-79-2BY" secondAttribute="bottom" constant="57" id="xaH-Dr-ODx"/>
+                </constraints>
             </view>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <size key="freeformSize" width="320" height="568"/>
+            <size key="freeformSize" width="600" height="600"/>
             <connections>
                 <outlet property="noButton" destination="Nv0-If-vkK" id="UhA-Nb-S6Y"/>
                 <outlet property="yesButton" destination="6Pg-al-MvC" id="FjH-Z0-7bq"/>

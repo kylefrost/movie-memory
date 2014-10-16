@@ -13,6 +13,12 @@
 
 @property (strong, nonatomic) MMFirstOpenViewController *firstOpenViewController;
 
+// Views for Array
+@property (strong, nonatomic) UIViewController *oneView;
+@property (strong, nonatomic) UIViewController *twoView;
+@property (strong, nonatomic) UIViewController *threeView;
+@property (strong, nonatomic) UIViewController *fourView;
+
 @end
 
 @implementation MMTabController
@@ -21,17 +27,15 @@
 
 -(void)viewDidLoad {
 
+    NSLog(@"Tab View has Loaded");
+    
+    [self setUpFirstView];
+    
     // Add the center Add Button to TabBar
     [self addCenterButtonWithImage:[UIImage imageNamed:@"add_button"] highlightImage:nil];
     
     // Change TabBar tint color to custom red
     self.tabBar.tintColor = [UIColor colorWithRed:0.922 green:0.196 blue:0.192 alpha:1.000];
-    
-    // Set up blurred background of first open view controller
-    self.blurredView = [[FXBlurView alloc] initWithFrame:self.view.frame];
-    self.blurredView.tintColor = [UIColor clearColor];
-    self.blurredView.blurRadius = 15.0;
-    self.blurredView.alpha = 0;
     
     //[self performSegueWithIdentifier:@"openFirstOpen" sender:self];
     
@@ -46,8 +50,6 @@
 -(void)viewWillAppear:(BOOL)animated {
     
     // First open view controller dismissal
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dismissFirstOpenViewController:) name:@"dismissFirstOpen" object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(removeFirstOpenViewControllerBlur:) name:@"removeFirstOpenBlur" object:nil];
 }
 
 -(void)viewDidAppear:(BOOL)animated {
@@ -85,6 +87,7 @@
     // When Add button is pressed run -(void)pressAdd
     [button addTarget:self action:@selector(pressAdd) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
+    [self.view bringSubviewToFront:self.blurredView];
 }
 
 // Runs when MMBarcodeScannedViewController scans a barcode and dismisses itself
@@ -109,6 +112,92 @@
     else {
         [self performSegueWithIdentifier:@"addScannedMovie" sender:self];
     }
+}
+
+#pragma mark - First View Shit
+
+- (void)setUpFirstView
+{
+    [self setUpViews];
+    
+    // Set up blurred background of first open view controller
+    self.blurredView = [[FXBlurView alloc] initWithFrame:self.view.frame];
+    self.blurredView.tintColor = [UIColor clearColor];
+    self.blurredView.blurRadius = 15.0;
+    self.blurredView.alpha = 0;
+    
+    self.scrollView = [[UIScrollView alloc] initWithFrame:self.blurredView.frame];
+    self.scrollView.pagingEnabled = TRUE;
+    self.scrollView.showsHorizontalScrollIndicator = NO;
+    self.scrollView.alpha = 0;
+    
+    NSArray *viewArray = [NSArray arrayWithObjects:self.oneView, self.twoView, self.threeView, self.fourView, nil];
+    
+    // self.pageControl.numberOfPages = viewArray.count;
+    
+    for (int i = 0; i < viewArray.count; i++) {
+        
+        CGRect frame;
+        frame.origin.x = self.scrollView.frame.size.width * i;
+        frame.origin.y = 0;
+        frame.size = self.scrollView.frame.size;
+        
+        UIViewController *controller = [viewArray objectAtIndex:i];
+        UIView *subview = controller.view;
+        
+        subview.frame = frame;
+        
+        [self.scrollView addSubview:subview];
+    }
+    
+    self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width * viewArray.count, self.scrollView.frame.size.height);
+    
+    [self.view addSubview:self.blurredView];
+    [self.view bringSubviewToFront:self.blurredView];
+    
+    [self.blurredView addSubview:self.scrollView];
+    [self.blurredView bringSubviewToFront:self.scrollView];
+    
+    [UIView animateWithDuration:1.0 animations:^{
+        self.blurredView.alpha = 1;
+        self.scrollView.alpha = 1;
+    }];
+}
+
+- (void)setUpViews {
+    [self setUpFirstViewController];
+    [self setUpSecondViewController];
+    [self setUpThirdViewController];
+    [self setUpFourthViewController];
+}
+
+- (void)setUpFirstViewController {
+    NSArray *nibs = [[NSBundle mainBundle] loadNibNamed:@"MMFirstOpenOneViewController" owner:self options:nil];
+    self.oneView = [nibs objectAtIndex:0];
+}
+
+- (void)setUpSecondViewController {
+    NSArray *nibs = [[NSBundle mainBundle] loadNibNamed:@"MMFirstOpenTwoViewController" owner:self options:nil];
+    self.twoView = [nibs objectAtIndex:0];
+}
+
+- (void)setUpThirdViewController {
+    NSArray *nibs = [[NSBundle mainBundle] loadNibNamed:@"MMFirstOpenThreeViewController" owner:self options:nil];
+    self.threeView = [nibs objectAtIndex:0];
+}
+
+- (void)setUpFourthViewController {
+    NSArray *nibs = [[NSBundle mainBundle] loadNibNamed:@"MMFirstOpenFourViewController" owner:self options:nil];
+    self.fourView = [nibs objectAtIndex:0];
+}
+
+- (void)dismissFirstOpenViewController {
+    
+    NSLog(@"Dismiss got called");
+    
+    [UIView animateWithDuration:0.5 animations:^{
+        self.blurredView.alpha = 0;
+    }];
 }
 
 #pragma mark - First Open View Functions

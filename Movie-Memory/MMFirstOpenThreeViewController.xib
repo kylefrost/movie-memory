@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6185.11" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment defaultVersion="1808" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6190.4"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -13,41 +13,53 @@
                 <viewControllerLayoutGuide type="bottom" id="2fk-xL-ck0"/>
             </layoutGuides>
             <view key="view" contentMode="scaleToFill" id="RJC-oW-JEk">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This one's all about preference." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="291" translatesAutoresizingMaskIntoConstraints="NO" id="h7r-wc-Zcm">
-                        <rect key="frame" x="15" y="49" width="291" height="138"/>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This one's all about preference." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="291" translatesAutoresizingMaskIntoConstraints="NO" id="h7r-wc-Zcm">
+                        <rect key="frame" x="155" y="50" width="291" height="109"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="291" id="yQi-1J-uny"/>
+                        </constraints>
                         <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="39"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Do you want to enable Quick Add for movies?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="197" translatesAutoresizingMaskIntoConstraints="NO" id="itk-pa-1kT">
-                        <rect key="frame" x="62" y="173" width="197" height="68"/>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="With this turned on, the Add Movie panel will appear immediately on open." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="219" translatesAutoresizingMaskIntoConstraints="NO" id="BMM-MK-U6w">
+                        <rect key="frame" x="191" y="240" width="219" height="75"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="75" id="ntw-1a-VYv"/>
+                            <constraint firstAttribute="width" constant="219" id="x8q-OT-J8o"/>
+                        </constraints>
                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="With this turned on, the Add Movie panel will appear immediately on open." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="219" translatesAutoresizingMaskIntoConstraints="NO" id="BMM-MK-U6w">
-                        <rect key="frame" x="51" y="212" width="219" height="137"/>
-                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Swipe left to continue." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kun-Fs-1vt">
-                        <rect key="frame" x="74" y="482" width="172" height="21"/>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe left to continue." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kun-Fs-1vt">
+                        <rect key="frame" x="214" y="515" width="172" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="172" id="PJV-hz-Y2k"/>
+                            <constraint firstAttribute="height" constant="21" id="UsF-hD-64j"/>
+                        </constraints>
                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="(You can change this later in settings.)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qr5-Bv-neP">
-                        <rect key="frame" x="16" y="424" width="289" height="21"/>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(You can change this later in settings.)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qr5-Bv-neP">
+                        <rect key="frame" x="156" y="438" width="289" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="9kU-te-UcR"/>
+                            <constraint firstAttribute="width" constant="289" id="U9b-t6-MGn"/>
+                        </constraints>
                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="13"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N2u-jd-VOW">
-                        <rect key="frame" x="20" y="342" width="135" height="60"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N2u-jd-VOW">
+                        <rect key="frame" x="160" y="370" width="135" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="60" id="BgY-IS-Ph2"/>
+                        </constraints>
                         <state key="normal" backgroundImage="yes_add_button">
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
@@ -56,8 +68,8 @@
                             <action selector="pressYesButton:" destination="W9F-8p-aLk" eventType="touchUpInside" id="2bS-Ib-50i"/>
                         </connections>
                     </button>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lR7-gP-QO8">
-                        <rect key="frame" x="165" y="342" width="135" height="60"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lR7-gP-QO8">
+                        <rect key="frame" x="305" y="370" width="135" height="60"/>
                         <state key="normal" backgroundImage="no_add_button">
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
@@ -66,15 +78,43 @@
                             <action selector="pressNoButton:" destination="W9F-8p-aLk" eventType="touchUpInside" id="rXY-OV-MCx"/>
                         </connections>
                     </button>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Do you want to enable Quick Add for movies?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="197" translatesAutoresizingMaskIntoConstraints="NO" id="itk-pa-1kT">
+                        <rect key="frame" x="202" y="233" width="197" height="53"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="197" id="dZZ-di-69m"/>
+                            <constraint firstAttribute="height" constant="53" id="ikf-Z7-n1X"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="N2u-jd-VOW" firstAttribute="top" secondItem="lR7-gP-QO8" secondAttribute="top" id="2AV-NX-1el"/>
+                    <constraint firstItem="Qr5-Bv-neP" firstAttribute="centerX" secondItem="Kun-Fs-1vt" secondAttribute="centerX" id="3z7-oh-1t2"/>
+                    <constraint firstItem="lR7-gP-QO8" firstAttribute="leading" secondItem="N2u-jd-VOW" secondAttribute="trailing" constant="10" id="Aug-VQ-I9b"/>
+                    <constraint firstItem="itk-pa-1kT" firstAttribute="centerX" secondItem="BMM-MK-U6w" secondAttribute="centerX" id="B8q-eF-L8p"/>
+                    <constraint firstItem="BMM-MK-U6w" firstAttribute="top" secondItem="h7r-wc-Zcm" secondAttribute="bottom" constant="81" id="CvC-Fc-0ms"/>
+                    <constraint firstAttribute="centerX" secondItem="N2u-jd-VOW" secondAttribute="centerX" constant="72.5" id="P1P-FF-K82"/>
+                    <constraint firstItem="Qr5-Bv-neP" firstAttribute="centerX" secondItem="BMM-MK-U6w" secondAttribute="centerX" id="QbD-bx-c0N"/>
+                    <constraint firstItem="lR7-gP-QO8" firstAttribute="top" secondItem="BMM-MK-U6w" secondAttribute="bottom" constant="55" id="Xig-7f-mMX"/>
+                    <constraint firstItem="h7r-wc-Zcm" firstAttribute="centerX" secondItem="itk-pa-1kT" secondAttribute="centerX" id="Zvr-0I-3O9"/>
+                    <constraint firstItem="Qr5-Bv-neP" firstAttribute="top" secondItem="N2u-jd-VOW" secondAttribute="bottom" constant="8" symbolic="YES" id="dd6-z3-o6q"/>
+                    <constraint firstItem="BMM-MK-U6w" firstAttribute="centerX" secondItem="RJC-oW-JEk" secondAttribute="centerX" id="hj9-gX-0wn"/>
+                    <constraint firstItem="Kun-Fs-1vt" firstAttribute="top" secondItem="Qr5-Bv-neP" secondAttribute="bottom" constant="56" id="ij9-z1-X80"/>
+                    <constraint firstItem="itk-pa-1kT" firstAttribute="top" secondItem="NF7-1M-YSY" secondAttribute="bottom" constant="213" id="pJ2-Ql-Kg2"/>
+                    <constraint firstItem="2fk-xL-ck0" firstAttribute="top" secondItem="Kun-Fs-1vt" secondAttribute="bottom" constant="64" id="pjB-PT-l44"/>
+                    <constraint firstItem="h7r-wc-Zcm" firstAttribute="top" secondItem="NF7-1M-YSY" secondAttribute="bottom" constant="30" id="qHp-D1-gHj"/>
+                    <constraint firstAttribute="centerX" secondItem="lR7-gP-QO8" secondAttribute="centerX" constant="-72.5" id="sKe-zr-uuu"/>
+                </constraints>
             </view>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <size key="freeformSize" width="320" height="568"/>
+            <size key="freeformSize" width="600" height="600"/>
             <connections>
                 <outlet property="noButton" destination="lR7-gP-QO8" id="6DS-EK-WUm"/>
                 <outlet property="yesButton" destination="N2u-jd-VOW" id="dtz-hC-Jtu"/>
             </connections>
-            <point key="canvasLocation" x="471" y="524"/>
+            <point key="canvasLocation" x="586" y="484"/>
         </viewController>
     </objects>
     <resources>

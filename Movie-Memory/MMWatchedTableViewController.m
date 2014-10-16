@@ -94,10 +94,7 @@
 
 -(void)viewDidAppear:(BOOL)animated {
     
-    //NSLog(@"ViewDidAppear Called");
-    
     // Load the tableView with information from the Core Data movies
-
     NSManagedObjectContext *managedContext = [self managedObjectContext];
     NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:@"Movie"];
     _movies = [[managedContext executeFetchRequest:request error:nil] mutableCopy];
@@ -114,7 +111,6 @@
 }
 
 - (void)updateTableView {
-    NSLog(@"\n\n\nupdateTableView called.\n\nself.movies.count is: %lu\nself.movies is: %@\nself.tableView.subviews is: %@", (unsigned long)self.movies.count, self.movies, self.tableView.subviews);
     [self loadMovies];
     [self.tableView reloadData];
     if (_movies.count == 0) {
