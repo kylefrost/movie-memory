@@ -456,11 +456,11 @@
                             <constraint firstAttribute="trailingMargin" secondItem="hZH-AT-AeN" secondAttribute="trailing" constant="-20" id="84A-aB-KZk"/>
                             <constraint firstItem="nJQ-mm-hDs" firstAttribute="centerY" secondItem="hZH-AT-AeN" secondAttribute="centerY" id="8AD-Zz-TkZ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="AlC-m0-5Af" secondAttribute="trailing" constant="-20" id="J72-rZ-d66"/>
+                            <constraint firstAttribute="centerX" secondItem="nJQ-mm-hDs" secondAttribute="centerX" id="NFq-iI-UXj"/>
                             <constraint firstAttribute="centerX" secondItem="hZH-AT-AeN" secondAttribute="centerX" id="Nhs-aA-MnX"/>
                             <constraint firstItem="eSj-8K-2Ey" firstAttribute="centerY" secondItem="nJQ-mm-hDs" secondAttribute="centerY" id="Q04-uQ-YeW"/>
                             <constraint firstItem="eSj-8K-2Ey" firstAttribute="centerX" secondItem="AlC-m0-5Af" secondAttribute="centerX" id="ZiL-96-16y"/>
                             <constraint firstItem="AlC-m0-5Af" firstAttribute="leading" secondItem="DQj-Kr-oNs" secondAttribute="leadingMargin" constant="-20" id="dsu-ZY-aiK"/>
-                            <constraint firstItem="nJQ-mm-hDs" firstAttribute="leading" secondItem="DQj-Kr-oNs" secondAttribute="leading" constant="281" id="mec-aU-gN2"/>
                             <constraint firstItem="Eqw-4D-pbm" firstAttribute="top" secondItem="hZH-AT-AeN" secondAttribute="bottom" id="tgd-WO-2Cs"/>
                         </constraints>
                     </view>
@@ -469,11 +469,13 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="600"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="nJQ-mm-hDs" id="ljx-yt-AEa"/>
                         <outlet property="addManualBar" destination="AlC-m0-5Af" id="Hc0-9H-84V"/>
                         <outlet property="bigStarButton" destination="mIi-tv-KUA" id="61O-ib-8jV"/>
                         <outlet property="commentSection" destination="k7j-dc-hP6" id="ylr-O7-YQQ"/>
                         <outlet property="coverImage" destination="oBJ-sA-Stx" id="1A7-7b-AKh"/>
                         <outlet property="dateButton" destination="dJx-FC-7AL" id="w47-G6-ron"/>
+                        <outlet property="indicatorBackground" destination="eSj-8K-2Ey" id="vdH-2e-urn"/>
                         <outlet property="ratingLabel" destination="cT2-1b-OiT" id="9oU-Lh-1gd"/>
                         <outlet property="releaseField" destination="rCf-39-bD4" id="SrP-L3-pWC"/>
                         <outlet property="searchCoverButton" destination="rmO-fS-8Cm" id="iii-Im-71A"/>

@@ -18,6 +18,9 @@
     NSInteger searchButton;
 }
 
+@property (strong, nonatomic) IBOutlet UIImageView *indicatorBackground;
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
+
 @end
 
 @implementation MMAddManualViewController
@@ -50,6 +53,8 @@
     self.addManualBar.delegate = self;
     self.addManualBar.barTintColor = [UIColor colorWithRed:0.890 green:0.100 blue:0.148 alpha:1.000];
     self.addManualBar.titleTextAttributes = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor], NSForegroundColorAttributeName, nil];
+    [self.activityIndicator setHidden:YES];
+    [self.indicatorBackground setHidden:YES];
     
     // Button borders
     UIView *starTopBorderView = [[UIView alloc] initWithFrame:CGRectMake(-5, 0, self.bigStarButton.frame.size.width+5, 1)];
@@ -363,11 +368,22 @@
     [self.myDelegate updateTableView];
     [[NSNotificationCenter defaultCenter] postNotificationName:@"updateTableView" object:nil];
     
+    
+    [self.activityIndicator startAnimating];
+    [self.activityIndicator setHidden:NO];
+    self.indicatorBackground.layer.backgroundColor = [UIColor blackColor].CGColor;
+    self.indicatorBackground.layer.opacity = 0.5f;
+    self.indicatorBackground.layer.cornerRadius = self.indicatorBackground.bounds.size.width/2;
+    [self.indicatorBackground setHidden:NO];
+
+    
     [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(dismissView) userInfo:nil repeats:NO];
 }
 
 -(void)dismissView
 {
+    [self.activityIndicator stopAnimating];
+    [self.indicatorBackground setHidden:YES];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
