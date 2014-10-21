@@ -16,10 +16,11 @@
     
     NSString *version = [[UIDevice currentDevice] systemVersion];
     
-    if ([version isEqualToString:@"8.0"]) {
+    if ([version isEqualToString:@"8.0"] || [version isEqualToString:@"8.1"]) {
         IOS8 = YES;
-    } else
+    } else {
         return NO;
+    }
     
     return IOS8;
 }

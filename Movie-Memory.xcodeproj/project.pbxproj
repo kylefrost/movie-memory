@@ -556,6 +556,7 @@
 				27E12492193047520081A218 /* Frameworks */,
 				27E12493193047520081A218 /* Resources */,
 				27E8B183193687FD00B56288 /* Update Build Number */,
+				272FA77719F5D29500530A42 /* Update Version */,
 				27BD9005197B253200D8C251 /* Crashlytics */,
 			);
 			buildRules = (
@@ -649,6 +650,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		272FA77719F5D29500530A42 /* Update Version */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Update Version";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "~/Xcode/autobuildlongnumber.sh";
+		};
 		27BD9005197B253200D8C251 /* Crashlytics */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -675,7 +690,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#!/bin/bash\nbuildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"$INFOPLIST_FILE\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"$INFOPLIST_FILE\"";
+			shellScript = "~/Xcode/autobuildnumber.sh";
 		};
 /* End PBXShellScriptBuildPhase section */
 
