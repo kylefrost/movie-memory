@@ -90,7 +90,6 @@
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
         [dateFormatter setDateFormat:@"M/d/yyyy"];
         self.watchedLabel.text = [NSString stringWithFormat:@"%@", [dateFormatter stringFromDate:[NSDate date]]];
-        [self.titleField becomeFirstResponder];
     }
     
     // Set ALL the delegates
@@ -157,6 +156,12 @@
     }
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    if (!_movies) {
+        [self.titleField becomeFirstResponder];
+    }
+}
+
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     // Add notification observers for if the keyboard is hidden or showing in order to move view for comments section
@@ -178,6 +183,7 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self
                                                     name:UIKeyboardWillHideNotification
                                                   object:nil];
+    [self resignFirstResponder];
     [self.myDelegate updateTableView];
 }
 
@@ -376,15 +382,30 @@
     self.indicatorBackground.layer.cornerRadius = self.indicatorBackground.bounds.size.width/2;
     [self.indicatorBackground setHidden:NO];
 
-    
-    [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(dismissView) userInfo:nil repeats:NO];
+    [NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(showCheckmark) userInfo:nil repeats:NO];
+    [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(makeCheckmark) userInfo:nil repeats:NO];
+    [NSTimer scheduledTimerWithTimeInterval:3.0 target:self selector:@selector(dismissView) userInfo:nil repeats:NO];
 }
 
--(void)dismissView
-{
-    [self.activityIndicator stopAnimating];
+-(void)dismissView {
     [self.indicatorBackground setHidden:YES];
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)showCheckmark {
+    NSArray *images = [NSArray arrayWithObjects:[UIImage imageNamed:@"checkmark_0"], [UIImage imageNamed:@"checkmark_1"], [UIImage imageNamed:@"checkmark_2"], [UIImage imageNamed:@"checkmark_3"], [UIImage imageNamed:@"checkmark_4"], [UIImage imageNamed:@"checkmark_5"], [UIImage imageNamed:@"checkmark_6"], [UIImage imageNamed:@"checkmark_7"], nil];
+    self.indicatorBackground.animationImages = images;
+    self.indicatorBackground.animationDuration = 0.5;
+    self.indicatorBackground.animationRepeatCount = 1;
+    self.indicatorBackground.contentMode = UIViewContentModeCenter;
+    [self.indicatorBackground startAnimating];
+
+    [self.activityIndicator setHidden:YES];
+}
+
+- (void)makeCheckmark {
+    [self.indicatorBackground stopAnimating];
+    self.indicatorBackground.image = [UIImage imageNamed:@"checkmark_7"];
 }
 
 -(IBAction)pressCancel:(id)sender {
