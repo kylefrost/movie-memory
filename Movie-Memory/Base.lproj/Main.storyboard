@@ -200,6 +200,10 @@
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="no_cover" translatesAutoresizingMaskIntoConstraints="NO" id="oBJ-sA-Stx">
                                         <rect key="frame" x="20" y="82" width="51" height="67"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="51" id="lcf-OQ-jpu"/>
+                                            <constraint firstAttribute="height" constant="67" id="pOg-XU-Vbi"/>
+                                        </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yeL-hA-1lN">
                                         <rect key="frame" x="247" y="222" width="115" height="23"/>

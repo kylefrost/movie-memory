@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <deployment defaultVersion="1808" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -30,6 +30,7 @@
                         <rect key="frame" x="160" y="367" width="135" height="60"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="60" id="XR9-Qb-Fch"/>
+                            <constraint firstAttribute="width" constant="135" id="yBO-bx-78F"/>
                         </constraints>
                         <state key="normal" backgroundImage="yes_button">
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -52,6 +53,7 @@
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Now on to the real stuff." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="246" translatesAutoresizingMaskIntoConstraints="NO" id="sqj-79-2BY">
                         <rect key="frame" x="177" y="35" width="246" height="137"/>
                         <constraints>
+                            <constraint firstAttribute="height" constant="137" id="aMT-th-K0r"/>
                             <constraint firstAttribute="width" constant="246" id="lri-CE-UgF"/>
                         </constraints>
                         <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="44"/>
@@ -70,6 +72,10 @@
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nv0-If-vkK">
                         <rect key="frame" x="305" y="367" width="135" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="135" id="GBg-Bk-r8a"/>
+                            <constraint firstAttribute="height" constant="60" id="O3r-cO-cUj"/>
+                        </constraints>
                         <state key="normal" backgroundImage="no_button">
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
@@ -81,6 +87,7 @@
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Can we send anonymous diagnostics data to the developers?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="273" translatesAutoresizingMaskIntoConstraints="NO" id="Mc6-I0-s3o">
                         <rect key="frame" x="164" y="146" width="273" height="111"/>
                         <constraints>
+                            <constraint firstAttribute="height" constant="111" id="Cn4-HZ-1cy"/>
                             <constraint firstAttribute="width" constant="273" id="Hgh-T1-mrH"/>
                         </constraints>
                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>

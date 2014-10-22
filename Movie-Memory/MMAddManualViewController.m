@@ -56,6 +56,9 @@
     [self.activityIndicator setHidden:YES];
     [self.indicatorBackground setHidden:YES];
     
+    // Set cover image to not change size.
+    self.coverImage.contentMode = UIViewContentModeScaleAspectFit;
+    
     // Button borders
     UIView *starTopBorderView = [[UIView alloc] initWithFrame:CGRectMake(-5, 0, self.bigStarButton.frame.size.width+5, 1)];
     UIView *starBottomBorderView = [[UIView alloc] initWithFrame:CGRectMake(-5, self.bigStarButton.frame.size.height-1, self.bigStarButton.frame.size.width+5, 1)];
@@ -383,7 +386,7 @@
     [self.indicatorBackground setHidden:NO];
 
     [NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(showCheckmark) userInfo:nil repeats:NO];
-    [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(makeCheckmark) userInfo:nil repeats:NO];
+    [NSTimer scheduledTimerWithTimeInterval:1.9 target:self selector:@selector(makeCheckmark) userInfo:nil repeats:NO];
     [NSTimer scheduledTimerWithTimeInterval:3.0 target:self selector:@selector(dismissView) userInfo:nil repeats:NO];
 }
 
@@ -399,7 +402,6 @@
     self.indicatorBackground.animationRepeatCount = 1;
     self.indicatorBackground.contentMode = UIViewContentModeCenter;
     [self.indicatorBackground startAnimating];
-
     [self.activityIndicator setHidden:YES];
 }
 
