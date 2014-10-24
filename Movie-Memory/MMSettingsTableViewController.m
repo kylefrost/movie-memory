@@ -32,26 +32,21 @@
     [self.tableView deselectRowAtIndexPath:tableSelection animated:NO];
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    if ([defaults boolForKey:@"autoAddSwitch"]) {
+    if ([defaults boolForKey:MMAutoAddIsEnabled]) {
         self.autoAddSwitch.on = YES;
     } else {
         self.autoAddSwitch.on = NO;
     }
 
-    if ([defaults boolForKey:@"sendAnonymousData"]) {
+    if ([defaults boolForKey:MMDiagnosticsAreEnabled]) {
         self.usageDataSwitch.on = YES;
     } else {
         self.usageDataSwitch.on = NO;
     }
 }
 
--(void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 - (IBAction)pressedResetButton:(id)sender {
-    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"isFirstOpen"];
+    [[NSUserDefaults standardUserDefaults] setBool:NO forKey:MMIsNotFirstOpen];
 }
 
 #pragma mark - UISwitches
@@ -61,9 +56,9 @@
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
     if (self.autoAddSwitch.on) {
-        [defaults setBool:YES forKey:@"autoAddSwitch"];
+        [defaults setBool:YES forKey:MMAutoAddIsEnabled];
     } else {
-        [defaults setBool:NO forKey:@"autoAddSwitch"];
+        [defaults setBool:NO forKey:MMAutoAddIsEnabled];
     }
 }
 
@@ -72,9 +67,9 @@
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
     if (self.usageDataSwitch.on) {
-        [defaults setBool:YES forKey:@"sendAnonymousUsage"];
+        [defaults setBool:YES forKey:MMDiagnosticsAreEnabled];
     } else {
-        [defaults setBool:NO forKey:@"sendAnonymousUsage"];
+        [defaults setBool:NO forKey:MMDiagnosticsAreEnabled];
     }
 }
 

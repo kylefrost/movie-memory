@@ -18,7 +18,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [Crashlytics startWithAPIKey:@"f2e8625c3346bb8ade5e78b6e3746a469803c440"];
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:MMDiagnosticsAreEnabled]) {
+        [Crashlytics startWithAPIKey:@"f2e8625c3346bb8ade5e78b6e3746a469803c440"];
+    }
     
     return YES;
 }

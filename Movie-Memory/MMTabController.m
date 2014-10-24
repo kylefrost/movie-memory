@@ -38,11 +38,11 @@
     //[self performSegueWithIdentifier:@"openFirstOpen" sender:self];
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    if (![defaults boolForKey:@"isFirstOpen"]) {
+    if (![defaults boolForKey:MMIsNotFirstOpen]) {
         [self setUpFirstView];
         // [self performSegueWithIdentifier:@"openFirstOpen" sender:self];
-        [defaults setBool:YES forKey:@"isFirstOpen"];
-        [defaults setBool:NO forKey:@"autoAddSwitch"];
+        [defaults setBool:YES forKey:MMIsNotFirstOpen];
+        [defaults setBool:NO forKey:MMAutoAddIsEnabled];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dismissFirstOpenViewController) name:@"dismissFirstOpen" object:nil];
     }
 }
@@ -58,7 +58,7 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(barcodeWasScanned:) name:@"scannedBarcode" object:nil];
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     if (![defaults boolForKey:@"alreadyOpenedAddMovie"]) {
-        if ([defaults boolForKey:@"autoAddSwitch"]) {
+        if ([defaults boolForKey:MMAutoAddIsEnabled]) {
             [self performSegueWithIdentifier:@"addManual" sender:self];
             [defaults setBool:YES forKey:@"alreadyOpenedAddMovie"];
         }

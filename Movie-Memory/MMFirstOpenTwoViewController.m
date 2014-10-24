@@ -26,7 +26,7 @@
     [self.yesButton setBackgroundImage:[[UIImage imageNamed:@"yes_button_pressed"] imageWithOverlayColor:[UIColor greenColor]] forState:UIControlStateNormal];
     [self.noButton setBackgroundImage:[UIImage imageNamed:@"no_button"] forState:UIControlStateNormal];
     
-    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"sendAnonymousData"];
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:MMDiagnosticsAreEnabled];
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
@@ -34,7 +34,7 @@
     [self.noButton setBackgroundImage:[[UIImage imageNamed:@"no_button_pressed"] imageWithOverlayColor:[UIColor redColor]] forState:UIControlStateNormal];
     [self.yesButton setBackgroundImage:[UIImage imageNamed:@"yes_button"] forState:UIControlStateNormal];
     
-    [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"sendAnonymousData"];
+    [[NSUserDefaults standardUserDefaults] setBool:NO forKey:MMDiagnosticsAreEnabled];
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
 

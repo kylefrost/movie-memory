@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		271C0243197A37BF00F56966 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 271C0242197A37BF00F56966 /* MessageUI.framework */; };
 		271C0245197A382800F56966 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 271C0244197A382800F56966 /* Social.framework */; };
+		2720DC7A19F9C8300036298C /* MMConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 2720DC7919F9C8300036298C /* MMConstants.m */; };
 		276799BE1936546B005AAB9E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 276799BD1936546B005AAB9E /* AudioToolbox.framework */; };
 		276799C0193655A1005AAB9E /* beep.wav in Resources */ = {isa = PBXBuildFile; fileRef = 276799BF193655A1005AAB9E /* beep.wav */; };
 		27868D12193060F400A965FF /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27868D11193060F400A965FF /* CoreData.framework */; };
@@ -84,6 +85,8 @@
 /* Begin PBXFileReference section */
 		271C0242197A37BF00F56966 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		271C0244197A382800F56966 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		2720DC7819F9C8300036298C /* MMConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMConstants.h; sourceTree = "<group>"; };
+		2720DC7919F9C8300036298C /* MMConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMConstants.m; sourceTree = "<group>"; };
 		276799BD1936546B005AAB9E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		276799BF193655A1005AAB9E /* beep.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = beep.wav; sourceTree = "<group>"; };
 		27868D11193060F400A965FF /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -246,6 +249,8 @@
 				2799CF591981995A0058308B /* UIImage+Overlay.m */,
 				2799CF5B19819AB50058308B /* UIColor+Custom.h */,
 				2799CF5C19819AB50058308B /* UIColor+Custom.m */,
+				2720DC7819F9C8300036298C /* MMConstants.h */,
+				2720DC7919F9C8300036298C /* MMConstants.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -730,6 +735,7 @@
 				2792E18919311BEA001FCE59 /* MMTableViewCell.m in Sources */,
 				2799CF631981B16B0058308B /* MMFirstOpenOneViewController.m in Sources */,
 				27BD8FFD197B1F3A00D8C251 /* MMFadeInSegue.m in Sources */,
+				2720DC7A19F9C8300036298C /* MMConstants.m in Sources */,
 				27E124DC19304F7A0081A218 /* MMWatchedViewController.m in Sources */,
 				27AB0B841935199100620A01 /* AFSecurityPolicy.m in Sources */,
 				2799CF741981B7680058308B /* MMFirstOpenFourViewController.m in Sources */,

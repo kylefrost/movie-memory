@@ -26,7 +26,7 @@
     [self.yesButton setBackgroundImage:[[UIImage imageNamed:@"yes_add_button_pressed"] imageWithOverlayColor:[UIColor greenColor]] forState:UIControlStateNormal];
     [self.noButton setBackgroundImage:[UIImage imageNamed:@"no_add_button"] forState:UIControlStateNormal];
     
-    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"autoAddSwitch"];
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:MMAutoAddIsEnabled];
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
@@ -34,7 +34,7 @@
     [self.noButton setBackgroundImage:[[UIImage imageNamed:@"no_add_button_pressed"] imageWithOverlayColor:[UIColor redColor]] forState:UIControlStateNormal];
     [self.yesButton setBackgroundImage:[UIImage imageNamed:@"yes_add_button"] forState:UIControlStateNormal];
     
-    [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"autoAddSwitch"];
+    [[NSUserDefaults standardUserDefaults] setBool:NO forKey:MMAutoAddIsEnabled];
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
