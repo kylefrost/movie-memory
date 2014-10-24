@@ -99,17 +99,15 @@
                     <constraint firstItem="N2u-jd-VOW" firstAttribute="top" secondItem="lR7-gP-QO8" secondAttribute="top" id="2AV-NX-1el"/>
                     <constraint firstItem="BMM-MK-U6w" firstAttribute="top" secondItem="itk-pa-1kT" secondAttribute="bottom" constant="3" id="3Yk-h3-AEt"/>
                     <constraint firstItem="Qr5-Bv-neP" firstAttribute="centerX" secondItem="Kun-Fs-1vt" secondAttribute="centerX" id="3z7-oh-1t2"/>
-                    <constraint firstItem="lR7-gP-QO8" firstAttribute="leading" secondItem="N2u-jd-VOW" secondAttribute="trailing" constant="10" id="Aug-VQ-I9b"/>
+                    <constraint firstItem="lR7-gP-QO8" firstAttribute="leading" secondItem="N2u-jd-VOW" secondAttribute="trailing" constant="10" id="7Gx-05-hMr"/>
                     <constraint firstItem="itk-pa-1kT" firstAttribute="centerX" secondItem="BMM-MK-U6w" secondAttribute="centerX" id="B8q-eF-L8p"/>
+                    <constraint firstItem="Kun-Fs-1vt" firstAttribute="top" secondItem="Qr5-Bv-neP" secondAttribute="bottom" constant="34" id="CIj-q4-rTS"/>
                     <constraint firstAttribute="centerY" secondItem="BMM-MK-U6w" secondAttribute="centerY" id="Fbl-HG-14m"/>
-                    <constraint firstAttribute="centerX" secondItem="N2u-jd-VOW" secondAttribute="centerX" constant="72.5" id="P1P-FF-K82"/>
+                    <constraint firstItem="Qr5-Bv-neP" firstAttribute="top" secondItem="lR7-gP-QO8" secondAttribute="bottom" constant="8" id="Mhb-Gs-qCd"/>
                     <constraint firstItem="Qr5-Bv-neP" firstAttribute="centerX" secondItem="BMM-MK-U6w" secondAttribute="centerX" id="QbD-bx-c0N"/>
                     <constraint firstItem="lR7-gP-QO8" firstAttribute="top" secondItem="BMM-MK-U6w" secondAttribute="bottom" constant="15" id="Xig-7f-mMX"/>
                     <constraint firstItem="h7r-wc-Zcm" firstAttribute="centerX" secondItem="itk-pa-1kT" secondAttribute="centerX" id="Zvr-0I-3O9"/>
-                    <constraint firstItem="Qr5-Bv-neP" firstAttribute="top" secondItem="N2u-jd-VOW" secondAttribute="bottom" constant="8" symbolic="YES" id="dd6-z3-o6q"/>
                     <constraint firstItem="BMM-MK-U6w" firstAttribute="centerX" secondItem="RJC-oW-JEk" secondAttribute="centerX" id="hj9-gX-0wn"/>
-                    <constraint firstItem="Kun-Fs-1vt" firstAttribute="top" secondItem="Qr5-Bv-neP" secondAttribute="bottom" constant="34" id="ij9-z1-X80"/>
-                    <constraint firstItem="2fk-xL-ck0" firstAttribute="top" secondItem="Kun-Fs-1vt" secondAttribute="bottom" constant="104" id="pjB-PT-l44"/>
                     <constraint firstAttribute="centerX" secondItem="lR7-gP-QO8" secondAttribute="centerX" constant="-72.5" id="sKe-zr-uuu"/>
                     <constraint firstItem="itk-pa-1kT" firstAttribute="top" secondItem="h7r-wc-Zcm" secondAttribute="bottom" constant="7" id="u4f-Oa-Fxj"/>
                 </constraints>
