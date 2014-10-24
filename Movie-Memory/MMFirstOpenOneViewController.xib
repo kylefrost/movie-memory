@@ -80,14 +80,13 @@
                     <constraint firstItem="mAN-Lk-EIi" firstAttribute="centerX" secondItem="EZa-Wj-cwy" secondAttribute="centerX" id="C72-Cj-9H1"/>
                     <constraint firstItem="Ee3-FU-cUB" firstAttribute="top" secondItem="mAN-Lk-EIi" secondAttribute="bottom" constant="8" symbolic="YES" id="Dhz-W0-KEG"/>
                     <constraint firstItem="EZa-Wj-cwy" firstAttribute="top" secondItem="Ee3-FU-cUB" secondAttribute="bottom" constant="54" id="OdM-7G-IKO"/>
+                    <constraint firstItem="Ee3-FU-cUB" firstAttribute="top" secondItem="YJD-LL-G0k" secondAttribute="bottom" constant="107" id="P59-dj-DWh"/>
                     <constraint firstItem="oU4-Zp-Gj9" firstAttribute="leading" secondItem="Ee3-FU-cUB" secondAttribute="trailing" constant="33" id="TyK-tF-0Jm"/>
                     <constraint firstItem="YJD-LL-G0k" firstAttribute="centerX" secondItem="mAN-Lk-EIi" secondAttribute="centerX" id="ZD8-lY-Ux5"/>
-                    <constraint firstItem="YJD-LL-G0k" firstAttribute="top" secondItem="JKQ-Vu-IxW" secondAttribute="bottom" constant="77" id="igN-4S-Oiv"/>
+                    <constraint firstAttribute="centerY" secondItem="mAN-Lk-EIi" secondAttribute="centerY" constant="41.5" id="grG-XB-6vW"/>
                     <constraint firstItem="oU4-Zp-Gj9" firstAttribute="top" secondItem="Ee3-FU-cUB" secondAttribute="top" id="kH0-PK-yfE"/>
                     <constraint firstAttribute="centerX" secondItem="YJD-LL-G0k" secondAttribute="centerX" id="ljC-Fp-6g6"/>
-                    <constraint firstItem="GF3-5T-LSS" firstAttribute="top" secondItem="EZa-Wj-cwy" secondAttribute="bottom" constant="148" id="xHJ-O4-qG2"/>
                     <constraint firstAttribute="centerX" secondItem="oU4-Zp-Gj9" secondAttribute="centerX" constant="-73.5" id="xaS-24-BAp"/>
-                    <constraint firstItem="mAN-Lk-EIi" firstAttribute="top" secondItem="JKQ-Vu-IxW" secondAttribute="bottom" constant="181" id="yah-Rs-Pq7"/>
                 </constraints>
             </view>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

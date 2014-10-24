@@ -17,17 +17,17 @@
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This one's all about preference." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="291" translatesAutoresizingMaskIntoConstraints="NO" id="h7r-wc-Zcm">
-                        <rect key="frame" x="155" y="50" width="291" height="109"/>
+                        <rect key="frame" x="158" y="102" width="285" height="97"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="109" id="ub7-SA-Hlc"/>
-                            <constraint firstAttribute="width" constant="291" id="yQi-1J-uny"/>
+                            <constraint firstAttribute="height" constant="97" id="ub7-SA-Hlc"/>
+                            <constraint firstAttribute="width" constant="285" id="yQi-1J-uny"/>
                         </constraints>
                         <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="39"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="With this turned on, the Add Movie panel will appear immediately on open." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="219" translatesAutoresizingMaskIntoConstraints="NO" id="BMM-MK-U6w">
-                        <rect key="frame" x="191" y="240" width="219" height="75"/>
+                        <rect key="frame" x="191" y="262" width="219" height="75"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="75" id="ntw-1a-VYv"/>
                             <constraint firstAttribute="width" constant="219" id="x8q-OT-J8o"/>
@@ -37,7 +37,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe left to continue." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kun-Fs-1vt">
-                        <rect key="frame" x="214" y="515" width="172" height="21"/>
+                        <rect key="frame" x="214" y="475" width="172" height="21"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="172" id="PJV-hz-Y2k"/>
                             <constraint firstAttribute="height" constant="21" id="UsF-hD-64j"/>
@@ -47,7 +47,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(You can change this later in settings.)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qr5-Bv-neP">
-                        <rect key="frame" x="156" y="438" width="289" height="21"/>
+                        <rect key="frame" x="156" y="420" width="289" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="9kU-te-UcR"/>
                             <constraint firstAttribute="width" constant="289" id="U9b-t6-MGn"/>
@@ -57,7 +57,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N2u-jd-VOW">
-                        <rect key="frame" x="160" y="370" width="135" height="60"/>
+                        <rect key="frame" x="160" y="352" width="135" height="60"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="60" id="BgY-IS-Ph2"/>
                             <constraint firstAttribute="width" constant="135" id="zaB-P9-vkO"/>
@@ -71,7 +71,7 @@
                         </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lR7-gP-QO8">
-                        <rect key="frame" x="305" y="370" width="135" height="60"/>
+                        <rect key="frame" x="305" y="352" width="135" height="60"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="60" id="tS7-1R-ZeU"/>
                             <constraint firstAttribute="width" constant="135" id="tbx-1L-cMJ"/>
@@ -85,7 +85,7 @@
                         </connections>
                     </button>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Do you want to enable Quick Add for movies?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="197" translatesAutoresizingMaskIntoConstraints="NO" id="itk-pa-1kT">
-                        <rect key="frame" x="202" y="228" width="197" height="53"/>
+                        <rect key="frame" x="202" y="206" width="197" height="53"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="197" id="dZZ-di-69m"/>
                             <constraint firstAttribute="height" constant="53" id="ikf-Z7-n1X"/>
@@ -97,21 +97,21 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="N2u-jd-VOW" firstAttribute="top" secondItem="lR7-gP-QO8" secondAttribute="top" id="2AV-NX-1el"/>
+                    <constraint firstItem="BMM-MK-U6w" firstAttribute="top" secondItem="itk-pa-1kT" secondAttribute="bottom" constant="3" id="3Yk-h3-AEt"/>
                     <constraint firstItem="Qr5-Bv-neP" firstAttribute="centerX" secondItem="Kun-Fs-1vt" secondAttribute="centerX" id="3z7-oh-1t2"/>
                     <constraint firstItem="lR7-gP-QO8" firstAttribute="leading" secondItem="N2u-jd-VOW" secondAttribute="trailing" constant="10" id="Aug-VQ-I9b"/>
                     <constraint firstItem="itk-pa-1kT" firstAttribute="centerX" secondItem="BMM-MK-U6w" secondAttribute="centerX" id="B8q-eF-L8p"/>
-                    <constraint firstItem="BMM-MK-U6w" firstAttribute="top" secondItem="h7r-wc-Zcm" secondAttribute="bottom" constant="81" id="CvC-Fc-0ms"/>
+                    <constraint firstAttribute="centerY" secondItem="BMM-MK-U6w" secondAttribute="centerY" id="Fbl-HG-14m"/>
                     <constraint firstAttribute="centerX" secondItem="N2u-jd-VOW" secondAttribute="centerX" constant="72.5" id="P1P-FF-K82"/>
                     <constraint firstItem="Qr5-Bv-neP" firstAttribute="centerX" secondItem="BMM-MK-U6w" secondAttribute="centerX" id="QbD-bx-c0N"/>
-                    <constraint firstItem="lR7-gP-QO8" firstAttribute="top" secondItem="BMM-MK-U6w" secondAttribute="bottom" constant="55" id="Xig-7f-mMX"/>
+                    <constraint firstItem="lR7-gP-QO8" firstAttribute="top" secondItem="BMM-MK-U6w" secondAttribute="bottom" constant="15" id="Xig-7f-mMX"/>
                     <constraint firstItem="h7r-wc-Zcm" firstAttribute="centerX" secondItem="itk-pa-1kT" secondAttribute="centerX" id="Zvr-0I-3O9"/>
                     <constraint firstItem="Qr5-Bv-neP" firstAttribute="top" secondItem="N2u-jd-VOW" secondAttribute="bottom" constant="8" symbolic="YES" id="dd6-z3-o6q"/>
                     <constraint firstItem="BMM-MK-U6w" firstAttribute="centerX" secondItem="RJC-oW-JEk" secondAttribute="centerX" id="hj9-gX-0wn"/>
-                    <constraint firstItem="Kun-Fs-1vt" firstAttribute="top" secondItem="Qr5-Bv-neP" secondAttribute="bottom" constant="56" id="ij9-z1-X80"/>
-                    <constraint firstItem="itk-pa-1kT" firstAttribute="top" secondItem="NF7-1M-YSY" secondAttribute="bottom" constant="208" id="pJ2-Ql-Kg2"/>
-                    <constraint firstItem="2fk-xL-ck0" firstAttribute="top" secondItem="Kun-Fs-1vt" secondAttribute="bottom" constant="64" id="pjB-PT-l44"/>
-                    <constraint firstItem="h7r-wc-Zcm" firstAttribute="top" secondItem="NF7-1M-YSY" secondAttribute="bottom" constant="30" id="qHp-D1-gHj"/>
+                    <constraint firstItem="Kun-Fs-1vt" firstAttribute="top" secondItem="Qr5-Bv-neP" secondAttribute="bottom" constant="34" id="ij9-z1-X80"/>
+                    <constraint firstItem="2fk-xL-ck0" firstAttribute="top" secondItem="Kun-Fs-1vt" secondAttribute="bottom" constant="104" id="pjB-PT-l44"/>
                     <constraint firstAttribute="centerX" secondItem="lR7-gP-QO8" secondAttribute="centerX" constant="-72.5" id="sKe-zr-uuu"/>
+                    <constraint firstItem="itk-pa-1kT" firstAttribute="top" secondItem="h7r-wc-Zcm" secondAttribute="bottom" constant="7" id="u4f-Oa-Fxj"/>
                 </constraints>
             </view>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
