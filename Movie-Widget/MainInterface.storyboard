@@ -14,11 +14,15 @@
                         <viewControllerLayoutGuide type="bottom" id="FKl-LY-JtV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DmI-gQ-mEm">
-                                <rect key="frame" x="189" y="10" width="60" height="60"/>
+                                <rect key="frame" x="189" y="8" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="ATN-5C-YQx"/>
+                                    <constraint firstAttribute="width" constant="60" id="bTz-Zi-6DV"/>
+                                </constraints>
                                 <state key="normal" image="add_movie_scan_widget_button" backgroundImage="add_movie_scan_widget_button">
                                     <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -28,7 +32,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lPp-ZI-4Jy">
-                                <rect key="frame" x="71" y="10" width="60" height="60"/>
+                                <rect key="frame" x="71" y="8" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="FqN-ZS-2FY"/>
+                                    <constraint firstAttribute="width" constant="60" id="Kee-R1-trg"/>
+                                </constraints>
                                 <state key="normal" image="add_movie_widget_button" backgroundImage="add_movie_widget_button">
                                     <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -37,11 +45,35 @@
                                     <action selector="addMovie:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="Hqx-iZ-h3d"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xJt-Nl-G2c">
+                                <rect key="frame" x="79" y="68" width="42" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="17" id="gRU-1f-98d"/>
+                                    <constraint firstAttribute="width" constant="42" id="wz1-Ru-Uc4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yhP-MN-ahQ">
+                                <rect key="frame" x="197" y="68" width="42" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="42" id="r17-jT-5cf"/>
+                                    <constraint firstAttribute="height" constant="17" id="shI-5r-84i"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="DmI-gQ-mEm" secondAttribute="bottom" constant="10" id="2Jv-z3-YoW"/>
+                            <constraint firstItem="xJt-Nl-G2c" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leadingMargin" constant="63" id="0lA-97-OEe"/>
+                            <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="xJt-Nl-G2c" secondAttribute="bottom" constant="5" id="75N-Af-uZ6"/>
+                            <constraint firstItem="DmI-gQ-mEm" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" constant="8" id="9QY-7i-7TZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yhP-MN-ahQ" secondAttribute="trailing" constant="65" id="J7h-ZP-iRy"/>
+                            <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="yhP-MN-ahQ" secondAttribute="bottom" constant="5" id="Qoz-da-abf"/>
+                            <constraint firstItem="lPp-ZI-4Jy" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" constant="8" id="WjD-vX-Jb3"/>
                             <constraint firstItem="lPp-ZI-4Jy" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leadingMargin" constant="55" id="dVu-Px-FaX"/>
-                            <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="lPp-ZI-4Jy" secondAttribute="bottom" constant="10" id="puX-Gp-8d4"/>
                             <constraint firstAttribute="trailingMargin" secondItem="DmI-gQ-mEm" secondAttribute="trailing" constant="55" id="yNz-7m-BYH"/>
                         </constraints>
                     </view>
@@ -50,7 +82,7 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="80"/>
+                    <size key="freeformSize" width="320" height="90"/>
                     <connections>
                         <outlet property="addMovieButton" destination="lPp-ZI-4Jy" id="JCa-vM-42i"/>
                         <outlet property="scanMovieButton" destination="DmI-gQ-mEm" id="HYS-WF-rgC"/>

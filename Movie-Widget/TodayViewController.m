@@ -21,7 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self setPreferredContentSize:CGSizeMake(320.0, 75.0)];
+    [self setPreferredContentSize:CGSizeMake(self.view.bounds.size.width, 90.0)];
 }
 
 - (UIEdgeInsets)widgetMarginInsetsForProposedMarginInsets:(UIEdgeInsets)defaultMarginInsets {
