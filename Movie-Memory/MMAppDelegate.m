@@ -24,6 +24,24 @@
     
     return YES;
 }
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    if (url == nil)
+        return YES;
+    
+    NSString *urlString = [[url host] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    
+    NSLog(@"urlString: %@", urlString);
+    
+    if ([urlString isEqualToString:@"addMovie"]) {
+        [self.window.rootViewController performSegueWithIdentifier:@"addManual" sender:self.window.rootViewController];
+    } else if ([urlString isEqualToString:@"scanBarcode"]) {
+        [self.window.rootViewController performSegueWithIdentifier:@"scanBarcode" sender:self.window.rootViewController];
+    }
+    
+    return YES;
+}
+
 							
 - (void)applicationWillResignActive:(UIApplication *)application
 {

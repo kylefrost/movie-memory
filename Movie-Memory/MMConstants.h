@@ -10,9 +10,14 @@
 
 @interface MMConstants : NSObject
 
-// NSUser Defaults
+// NSUserDefaults
 extern NSString *const MMDiagnosticsAreEnabled;
 extern NSString *const MMAutoAddIsEnabled;
 extern NSString *const MMIsNotFirstOpen;
+extern NSString *const MMAlreadyOpenedAddMovie;
+
+// Notifications
+extern NSString *const MMDismissFirstViewNotification;
+extern NSString *const MMDidScanBarCodeNotification;
 
 @end

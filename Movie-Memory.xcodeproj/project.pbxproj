@@ -74,6 +74,7 @@
 		27E124D2193047B90081A218 /* MMTabController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E124D1193047B90081A218 /* MMTabController.m */; };
 		27E124DC19304F7A0081A218 /* MMWatchedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E124DB19304F7A0081A218 /* MMWatchedViewController.m */; };
 		27E124DF19304F950081A218 /* MMSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E124DE19304F950081A218 /* MMSettingsViewController.m */; };
+		27F3206319FB587A00642BC0 /* WidgetImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27F3206219FB587A00642BC0 /* WidgetImages.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -220,6 +221,7 @@
 		27E124DB19304F7A0081A218 /* MMWatchedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMWatchedViewController.m; sourceTree = "<group>"; };
 		27E124DD19304F950081A218 /* MMSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMSettingsViewController.h; sourceTree = "<group>"; };
 		27E124DE19304F950081A218 /* MMSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMSettingsViewController.m; sourceTree = "<group>"; };
+		27F3206219FB587A00642BC0 /* WidgetImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = WidgetImages.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -276,6 +278,7 @@
 			isa = PBXGroup;
 			children = (
 				270A19F619FB304C0003D3DB /* Info.plist */,
+				27F3206219FB587A00642BC0 /* WidgetImages.xcassets */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -719,6 +722,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				270A19FB19FB304C0003D3DB /* MainInterface.storyboard in Resources */,
+				27F3206319FB587A00642BC0 /* WidgetImages.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1097,6 +1101,7 @@
 				270A1A0119FB304C0003D3DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		27E12490193047520081A218 /* Build configuration list for PBXProject "Movie-Memory" */ = {
 			isa = XCConfigurationList;

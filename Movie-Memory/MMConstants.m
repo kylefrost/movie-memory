@@ -14,5 +14,10 @@
 NSString *const MMDiagnosticsAreEnabled = @"sendAnonymousData";
 NSString *const MMAutoAddIsEnabled = @"autoAddSwitch";
 NSString *const MMIsNotFirstOpen = @"isNotFirstOpen";
+NSString *const MMAlreadyOpenedAddMovie = @"alreadyOpenedAddMovie";
+
+// Notifications
+NSString *const MMDismissFirstViewNotification = @"dismissFirstOpen";
+NSString *const MMDidScanBarCodeNotification = @"scannedBarcode";
 
 @end

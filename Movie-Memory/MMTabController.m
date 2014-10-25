@@ -27,8 +27,6 @@
 
 -(void)viewDidLoad {
 
-    NSLog(@"Tab View has Loaded");
-    
     // Add the center Add Button to TabBar
     [self addCenterButtonWithImage:[UIImage imageNamed:@"add_button"] highlightImage:nil];
     
@@ -43,7 +41,7 @@
         // [self performSegueWithIdentifier:@"openFirstOpen" sender:self];
         [defaults setBool:YES forKey:MMIsNotFirstOpen];
         [defaults setBool:NO forKey:MMAutoAddIsEnabled];
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dismissFirstOpenViewController) name:@"dismissFirstOpen" object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dismissFirstOpenViewController) name:MMDismissFirstViewNotification object:nil];
     }
 }
 
@@ -55,12 +53,11 @@
 -(void)viewDidAppear:(BOOL)animated {
     
     // Listen for notification from MMScanBarcodeViewController with the scanned movie's name
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(barcodeWasScanned:) name:@"scannedBarcode" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(barcodeWasScanned:) name:MMDidScanBarCodeNotification object:nil];
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    if (![defaults boolForKey:@"alreadyOpenedAddMovie"]) {
+    if (![defaults boolForKey:MMAlreadyOpenedAddMovie]) {
         if ([defaults boolForKey:MMAutoAddIsEnabled]) {
             [self performSegueWithIdentifier:@"addManual" sender:self];
-            [defaults setBool:YES forKey:@"alreadyOpenedAddMovie"];
         }
     }
 }
@@ -94,7 +91,7 @@
 -(void)barcodeWasScanned:(NSNotification *)notification {
     
     // Listen for notification
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"scannedBarcode" object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:MMDidScanBarCodeNotification object:nil];
     
     // Set the movieName to the object of the notification being recieved
     self.movieName = notification.object;
@@ -191,21 +188,13 @@
     self.fourView = [nibs objectAtIndex:0];
 }
 
+#pragma mark - First Open View Functions
+
 - (void)dismissFirstOpenViewController {
-    
-    NSLog(@"Dismiss got called");
-    
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:MMAlreadyOpenedAddMovie];
     [UIView animateWithDuration:0.5 animations:^{
         self.blurredView.alpha = 0;
     }];
-}
-
-#pragma mark - First Open View Functions
-
-- (void)dismissFirstOpenViewController:(NSNotification *)notification
-{
-    [self.blurredView removeFromSuperview];
-    [self.firstOpenViewController.view removeFromSuperview];
 }
 
 - (void)removeFirstOpenViewControllerBlur:(NSNotification *)notification
@@ -255,11 +244,6 @@
         controller.movieName = sendString;
         controller.isBarcode = 1;
         NSLog(@"sendString: %@", sendString);
-    } else if ([segue.identifier isEqualToString:@"openFirstOpen"]) {
-        self.firstOpenViewController = segue.destinationViewController;
-        self.firstOpenViewController.tabController = self;
-        [self addChildViewController:self.firstOpenViewController];
-        [self.firstOpenViewController didMoveToParentViewController:self];
     }
 }
 

@@ -11,18 +11,31 @@
 
 @interface TodayViewController () <NCWidgetProviding>
 
+@property (strong, nonatomic) IBOutlet UIButton *addMovieButton;
+@property (strong, nonatomic) IBOutlet UIButton *scanMovieButton;
+
 @end
 
 @implementation TodayViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setPreferredContentSize:CGSizeMake(320.0, 55.0)];
+    
+    [self setPreferredContentSize:CGSizeMake(320.0, 75.0)];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (UIEdgeInsets)widgetMarginInsetsForProposedMarginInsets:(UIEdgeInsets)defaultMarginInsets {
+    return UIEdgeInsetsZero;
+}
+
+- (IBAction)addMovie:(id)sender {
+    NSURL *url = [NSURL URLWithString:@"moviememory://addMovie"];
+    [self.extensionContext openURL:url completionHandler:nil];
+}
+
+- (IBAction)scanMovie:(id)sender {
+    NSURL *url = [NSURL URLWithString:@"moviememory://scanBarcode"];
+    [self.extensionContext openURL:url completionHandler:nil];
 }
 
 @end
