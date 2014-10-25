@@ -8,6 +8,7 @@
 
 #import "MMAddManualViewController.h"
 #import "MMWatchedTableViewController.h"
+#import "FXBlurView.h"
 #import <QuartzCore/QuartzCore.h>
 
 @interface MMAddManualViewController () {
@@ -378,13 +379,25 @@
     [[NSNotificationCenter defaultCenter] postNotificationName:@"updateTableView" object:nil];
     
     
+    FXBlurView *blurView = [[FXBlurView alloc] initWithFrame:self.view.frame];
+    blurView.tintColor = [UIColor clearColor];
+    blurView.alpha = 0.0;
+    blurView.blurRadius = 5.0;
+    [self.view addSubview:blurView];
     [self.activityIndicator startAnimating];
     [self.activityIndicator setHidden:NO];
     self.indicatorBackground.layer.backgroundColor = [UIColor blackColor].CGColor;
     self.indicatorBackground.layer.opacity = 0.5f;
     self.indicatorBackground.layer.cornerRadius = self.indicatorBackground.bounds.size.width/2;
     [self.indicatorBackground setHidden:NO];
+    [self.view bringSubviewToFront:self.indicatorBackground];
+    [self.view bringSubviewToFront:self.activityIndicator];
+    [self resignFirstResponder];
 
+    [UIView animateWithDuration:0.2 animations:^{
+        blurView.alpha = 1.0;
+    }];
+    
     [NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(showCheckmark) userInfo:nil repeats:NO];
     [NSTimer scheduledTimerWithTimeInterval:1.9 target:self selector:@selector(makeCheckmark) userInfo:nil repeats:NO];
     [NSTimer scheduledTimerWithTimeInterval:3.0 target:self selector:@selector(dismissView) userInfo:nil repeats:NO];

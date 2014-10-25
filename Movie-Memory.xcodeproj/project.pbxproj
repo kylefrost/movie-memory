@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		270A19F319FB304C0003D3DB /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 270A19DD19FB2FFE0003D3DB /* NotificationCenter.framework */; };
+		270A19F919FB304C0003D3DB /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 270A19F819FB304C0003D3DB /* TodayViewController.m */; };
+		270A19FB19FB304C0003D3DB /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 270A19FA19FB304C0003D3DB /* MainInterface.storyboard */; };
+		270A19FE19FB304C0003D3DB /* Movie-Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 270A19F219FB304C0003D3DB /* Movie-Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		271C0243197A37BF00F56966 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 271C0242197A37BF00F56966 /* MessageUI.framework */; };
 		271C0245197A382800F56966 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 271C0244197A382800F56966 /* Social.framework */; };
 		2720DC7A19F9C8300036298C /* MMConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 2720DC7919F9C8300036298C /* MMConstants.m */; };
@@ -73,6 +77,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		270A19FC19FB304C0003D3DB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 27E1248D193047520081A218 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 270A19F119FB304C0003D3DB;
+			remoteInfo = "Movie-Widget";
+		};
 		27E124BE193047520081A218 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 27E1248D193047520081A218 /* Project object */;
@@ -82,7 +93,27 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		270A19ED19FB2FFF0003D3DB /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				270A19FE19FB304C0003D3DB /* Movie-Widget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		270A19DD19FB2FFE0003D3DB /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		270A19F219FB304C0003D3DB /* Movie-Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Movie-Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		270A19F619FB304C0003D3DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		270A19F719FB304C0003D3DB /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
+		270A19F819FB304C0003D3DB /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
+		270A19FA19FB304C0003D3DB /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
 		271C0242197A37BF00F56966 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		271C0244197A382800F56966 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		2720DC7819F9C8300036298C /* MMConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMConstants.h; sourceTree = "<group>"; };
@@ -192,6 +223,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		270A19EF19FB304C0003D3DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				270A19F319FB304C0003D3DB /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		27E12492193047520081A218 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -222,6 +261,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		270A19F419FB304C0003D3DB /* Movie-Widget */ = {
+			isa = PBXGroup;
+			children = (
+				270A19F719FB304C0003D3DB /* TodayViewController.h */,
+				270A19F819FB304C0003D3DB /* TodayViewController.m */,
+				270A19FA19FB304C0003D3DB /* MainInterface.storyboard */,
+				270A19F519FB304C0003D3DB /* Supporting Files */,
+			);
+			path = "Movie-Widget";
+			sourceTree = "<group>";
+		};
+		270A19F519FB304C0003D3DB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				270A19F619FB304C0003D3DB /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		276799C1193662FB005AAB9E /* App Delegate */ = {
 			isa = PBXGroup;
 			children = (
@@ -460,6 +518,7 @@
 			children = (
 				27E1249E193047520081A218 /* Movie-Memory */,
 				27E124C0193047520081A218 /* Movie-MemoryTests */,
+				270A19F419FB304C0003D3DB /* Movie-Widget */,
 				27E12497193047520081A218 /* Frameworks */,
 				27E12496193047520081A218 /* Products */,
 			);
@@ -470,6 +529,7 @@
 			children = (
 				27E12495193047520081A218 /* Movie-Memory.app */,
 				27E124B9193047520081A218 /* Movie-MemoryTests.xctest */,
+				270A19F219FB304C0003D3DB /* Movie-Widget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -488,6 +548,7 @@
 				27E1249A193047520081A218 /* CoreGraphics.framework */,
 				27E1249C193047520081A218 /* UIKit.framework */,
 				27E124BA193047520081A218 /* XCTest.framework */,
+				270A19DD19FB2FFE0003D3DB /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -553,6 +614,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		270A19F119FB304C0003D3DB /* Movie-Widget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 270A19FF19FB304C0003D3DB /* Build configuration list for PBXNativeTarget "Movie-Widget" */;
+			buildPhases = (
+				270A19EE19FB304C0003D3DB /* Sources */,
+				270A19EF19FB304C0003D3DB /* Frameworks */,
+				270A19F019FB304C0003D3DB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Movie-Widget";
+			productName = "Movie-Widget";
+			productReference = 270A19F219FB304C0003D3DB /* Movie-Widget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		27E12494193047520081A218 /* Movie-Memory */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 27E124CA193047520081A218 /* Build configuration list for PBXNativeTarget "Movie-Memory" */;
@@ -563,10 +641,12 @@
 				27E8B183193687FD00B56288 /* Update Build Number */,
 				272FA77719F5D29500530A42 /* Update Version */,
 				27BD9005197B253200D8C251 /* Crashlytics */,
+				270A19ED19FB2FFF0003D3DB /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				270A19FD19FB304C0003D3DB /* PBXTargetDependency */,
 			);
 			name = "Movie-Memory";
 			productName = "Movie-Memory";
@@ -601,6 +681,10 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Kyle Frost";
 				TargetAttributes = {
+					270A19F119FB304C0003D3DB = {
+						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = 34UZ7Y2KSW;
+					};
 					27E12494193047520081A218 = {
 						DevelopmentTeam = 34UZ7Y2KSW;
 					};
@@ -624,11 +708,20 @@
 			targets = (
 				27E12494193047520081A218 /* Movie-Memory */,
 				27E124B8193047520081A218 /* Movie-MemoryTests */,
+				270A19F119FB304C0003D3DB /* Movie-Widget */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		270A19F019FB304C0003D3DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				270A19FB19FB304C0003D3DB /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		27E12493193047520081A218 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -700,6 +793,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		270A19EE19FB304C0003D3DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				270A19F919FB304C0003D3DB /* TodayViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		27E12491193047520081A218 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -758,6 +859,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		270A19FD19FB304C0003D3DB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 270A19F119FB304C0003D3DB /* Movie-Widget */;
+			targetProxy = 270A19FC19FB304C0003D3DB /* PBXContainerItemProxy */;
+		};
 		27E124BF193047520081A218 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 27E12494193047520081A218 /* Movie-Memory */;
@@ -793,6 +899,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		270A1A0019FB304C0003D3DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Movie-Widget/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		270A1A0119FB304C0003D3DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Movie-Widget/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		27E124C8193047520081A218 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -948,6 +1090,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		270A19FF19FB304C0003D3DB /* Build configuration list for PBXNativeTarget "Movie-Widget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				270A1A0019FB304C0003D3DB /* Debug */,
+				270A1A0119FB304C0003D3DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		27E12490193047520081A218 /* Build configuration list for PBXProject "Movie-Memory" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
