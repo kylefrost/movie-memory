@@ -21,6 +21,7 @@
 
 @property (strong, nonatomic) IBOutlet UIImageView *indicatorBackground;
 @property (strong, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
+@property (strong, nonatomic) FXBlurView *blurView;
 
 @end
 
@@ -381,12 +382,12 @@
     [self.myDelegate updateTableView];
     [[NSNotificationCenter defaultCenter] postNotificationName:@"updateTableView" object:nil];
     
-    
-    FXBlurView *blurView = [[FXBlurView alloc] initWithFrame:self.view.frame];
-    blurView.tintColor = [UIColor clearColor];
-    blurView.alpha = 0.0;
-    blurView.blurRadius = 5.0;
-    [self.view addSubview:blurView];
+    self.blurView = [[FXBlurView alloc] init];
+    self.blurView.frame = self.view.frame;
+    self.blurView.tintColor = [UIColor clearColor];
+    self.blurView.alpha = 0.0;
+    self.blurView.blurRadius = 5.0;
+    [self.view addSubview:self.blurView];
     [self.activityIndicator startAnimating];
     [self.activityIndicator setHidden:NO];
     self.indicatorBackground.layer.backgroundColor = [UIColor blackColor].CGColor;
@@ -398,7 +399,7 @@
     [self resignFirstResponder];
 
     [UIView animateWithDuration:0.2 animations:^{
-        blurView.alpha = 1.0;
+        self.blurView.alpha = 1.0;
     }];
     
     [NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(showCheckmark) userInfo:nil repeats:NO];
@@ -407,7 +408,10 @@
 }
 
 -(void)dismissView {
-    [self.indicatorBackground setHidden:YES];
+    [UIView animateWithDuration:0.2 animations:^{
+        self.blurView.alpha = 0.0;
+        self.indicatorBackground.alpha = 0.0;
+    }];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
