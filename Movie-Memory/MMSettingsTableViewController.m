@@ -105,7 +105,7 @@
     }
     
     if ([indexPath isEqual:[tableView indexPathForCell:self.emailCell]]) {
-        NSString *messageBody = [NSString stringWithFormat:@"\n\n%@, %@", [UIDevice currentDevice].model, [UIDevice currentDevice].systemVersion];
+        NSString *messageBody = [NSString stringWithFormat:@"\n\nPlease do not delete the following information, it will help us better assess your problem.\n\n%@, %@\nVersion %@ (%@)", [UIDevice currentDevice].model, [UIDevice currentDevice].systemVersion, [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"], [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"]];
         
         MFMailComposeViewController* controller = [[MFMailComposeViewController alloc] init];
         controller.mailComposeDelegate = self;
@@ -244,7 +244,7 @@
     else if ([actionSheet tag] == 4) {
         
         if (buttonIndex == 0) {
-            NSString *messageBody = [NSString stringWithFormat:@"\n\n%@, %@", [UIDevice currentDevice].model, [UIDevice currentDevice].systemVersion];
+            NSString *messageBody = [NSString stringWithFormat:@"\n\nPlease do not delete the following information, it will help us better assess your problem.\n\n%@, %@\nVersion %@ (%@)", [UIDevice currentDevice].model, [UIDevice currentDevice].systemVersion, [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"], [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"]];
             
             MFMailComposeViewController* controller = [[MFMailComposeViewController alloc] init];
             controller.mailComposeDelegate = self;
@@ -270,7 +270,7 @@
     else if ([actionSheet tag] == 5) {
         
         if (buttonIndex == 0) {
-            NSString *messageBody = [NSString stringWithFormat:@"\n\n%@, %@", [UIDevice currentDevice].model, [UIDevice currentDevice].systemVersion];
+            NSString *messageBody = [NSString stringWithFormat:@"\n\nPlease do not delete the following information, it will help us better assess your problem.\n\n%@, %@\nVersion %@ (%@)", [UIDevice currentDevice].model, [UIDevice currentDevice].systemVersion, [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"], [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"]];
             
             MFMailComposeViewController* controller = [[MFMailComposeViewController alloc] init];
             controller.mailComposeDelegate = self;
