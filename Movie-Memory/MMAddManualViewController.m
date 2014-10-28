@@ -402,21 +402,28 @@
     [self.view bringSubviewToFront:self.indicatorBackground];
     [self.view bringSubviewToFront:self.activityIndicator];
     [self resignFirstResponder];
-
+    
+    self.saveButton.enabled = false;
+    self.cancelButton.enabled = false;
+    self.titleField.userInteractionEnabled = false;
+    self.releaseField.userInteractionEnabled = false;
+    self.searchCoverButton.userInteractionEnabled = false;
+    self.searchReleaseYear.userInteractionEnabled = false;
+    self.bigStarButton.userInteractionEnabled = false;
+    self.dateButton.userInteractionEnabled = false;
+    self.commentSection.userInteractionEnabled = false;
+    
     [UIView animateWithDuration:0.2 animations:^{
         self.blurView.alpha = 1.0;
     }];
     
     [NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(showCheckmark) userInfo:nil repeats:NO];
     [NSTimer scheduledTimerWithTimeInterval:1.9 target:self selector:@selector(makeCheckmark) userInfo:nil repeats:NO];
+    [NSTimer scheduledTimerWithTimeInterval:2.7 target:self selector:@selector(removeCheckmark) userInfo:nil repeats:NO];
     [NSTimer scheduledTimerWithTimeInterval:3.0 target:self selector:@selector(dismissView) userInfo:nil repeats:NO];
 }
 
 -(void)dismissView {
-    [UIView animateWithDuration:0.2 animations:^{
-        self.blurView.alpha = 0.0;
-        self.indicatorBackground.alpha = 0.0;
-    }];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
@@ -433,6 +440,13 @@
 - (void)makeCheckmark {
     [self.indicatorBackground stopAnimating];
     self.indicatorBackground.image = [UIImage imageNamed:@"checkmark_7"];
+}
+
+- (void)removeCheckmark {
+    [UIView animateWithDuration:0.2 animations:^{
+        self.blurView.alpha = 0.0;
+        self.indicatorBackground.alpha = 0.0;
+    }];
 }
 
 -(IBAction)pressCancel:(id)sender {

@@ -641,8 +641,7 @@
 				27E12491193047520081A218 /* Sources */,
 				27E12492193047520081A218 /* Frameworks */,
 				27E12493193047520081A218 /* Resources */,
-				27E8B183193687FD00B56288 /* Update Build Number */,
-				272FA77719F5D29500530A42 /* Update Version */,
+				272FA77719F5D29500530A42 /* Update Build */,
 				27BD9005197B253200D8C251 /* Crashlytics */,
 				270A19ED19FB2FFF0003D3DB /* Embed App Extensions */,
 			);
@@ -752,14 +751,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		272FA77719F5D29500530A42 /* Update Version */ = {
+		272FA77719F5D29500530A42 /* Update Build */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Update Version";
+			name = "Update Build";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -779,20 +778,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "./Crashlytics.framework/run f2e8625c3346bb8ade5e78b6e3746a469803c440 f15eea714c363abec2ea37ef685f70f055232e3adb28044e22e477211d695206";
-		};
-		27E8B183193687FD00B56288 /* Update Build Number */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Update Build Number";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "~/Xcode/autobuildnumber.sh";
 		};
 /* End PBXShellScriptBuildPhase section */
 

@@ -28,6 +28,8 @@
 // Properties of the navigation bar
 @property (weak, nonatomic) IBOutlet UINavigationBar *addManualBar;
 @property (nonatomic,readonly) UIBarPosition barPosition;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *saveButton;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *cancelButton;
 
 // Properties/Actions for the rating stars/label
 @property (weak, nonatomic) IBOutlet UILabel *ratingLabel;

@@ -476,12 +476,14 @@
                         <outlet property="activityIndicator" destination="nJQ-mm-hDs" id="ljx-yt-AEa"/>
                         <outlet property="addManualBar" destination="AlC-m0-5Af" id="Hc0-9H-84V"/>
                         <outlet property="bigStarButton" destination="mIi-tv-KUA" id="61O-ib-8jV"/>
+                        <outlet property="cancelButton" destination="s2i-0k-FPv" id="D7K-MX-dt7"/>
                         <outlet property="commentSection" destination="k7j-dc-hP6" id="ylr-O7-YQQ"/>
                         <outlet property="coverImage" destination="oBJ-sA-Stx" id="1A7-7b-AKh"/>
                         <outlet property="dateButton" destination="dJx-FC-7AL" id="w47-G6-ron"/>
                         <outlet property="indicatorBackground" destination="eSj-8K-2Ey" id="vdH-2e-urn"/>
                         <outlet property="ratingLabel" destination="cT2-1b-OiT" id="9oU-Lh-1gd"/>
                         <outlet property="releaseField" destination="rCf-39-bD4" id="SrP-L3-pWC"/>
+                        <outlet property="saveButton" destination="12m-qo-rcT" id="EiK-Xe-iyh"/>
                         <outlet property="searchCoverButton" destination="rmO-fS-8Cm" id="iii-Im-71A"/>
                         <outlet property="searchReleaseYear" destination="jhF-wx-FdB" id="OD4-59-cs8"/>
                         <outlet property="starButton" destination="yeL-hA-1lN" id="F1n-bZ-WPL"/>
