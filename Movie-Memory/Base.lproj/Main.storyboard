@@ -674,7 +674,35 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="CONTACT" id="7xz-rj-3bn">
+                            <tableViewSection headerTitle="OUR WORK" id="ggZ-ox-q8M">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="N7E-hR-8Gn">
+                                        <rect key="frame" x="0.0" y="119" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="N7E-hR-8Gn" id="izH-yQ-RIR">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="More Apps" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3l3-ts-k2G">
+                                                    <rect key="frame" x="256" y="11" width="88" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="01q-CH-pre"/>
+                                                        <constraint firstAttribute="width" constant="88" id="X9Q-R4-f7Y"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="centerY" secondItem="3l3-ts-k2G" secondAttribute="centerY" id="2ah-I9-gwh"/>
+                                                <constraint firstAttribute="centerX" secondItem="3l3-ts-k2G" secondAttribute="centerX" id="eUn-s2-vSy"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="CONTACT" footerTitle="© 2014 Kyle Frost" id="7xz-rj-3bn">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Jz3-Zp-0lU">
                                         <rect key="frame" x="0.0" y="119" width="320" height="44"/>
@@ -750,34 +778,6 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="OUR WORK" footerTitle="© 2014 Kyle Frost" id="ggZ-ox-q8M">
-                                <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="N7E-hR-8Gn">
-                                        <rect key="frame" x="0.0" y="119" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="N7E-hR-8Gn" id="izH-yQ-RIR">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="More Apps" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3l3-ts-k2G">
-                                                    <rect key="frame" x="256" y="11" width="88" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="01q-CH-pre"/>
-                                                        <constraint firstAttribute="width" constant="88" id="X9Q-R4-f7Y"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="centerY" secondItem="3l3-ts-k2G" secondAttribute="centerY" id="2ah-I9-gwh"/>
-                                                <constraint firstAttribute="centerX" secondItem="3l3-ts-k2G" secondAttribute="centerX" id="eUn-s2-vSy"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="c9T-yl-Uau" id="gY5-ME-1G9"/>
@@ -785,11 +785,6 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Settings" id="kjJ-Xi-dlu">
-                        <barButtonItem key="leftBarButtonItem" title="Beta: Reset" id="O27-hK-PTE">
-                            <connections>
-                                <action selector="pressedResetButton:" destination="c9T-yl-Uau" id="VDz-1A-7g5"/>
-                            </connections>
-                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="action" id="X2x-RB-iDn">
                             <connections>
                                 <action selector="pressShare:" destination="c9T-yl-Uau" id="pLY-vQ-DI4"/>
@@ -802,7 +797,6 @@
                         <outlet property="facebookCell" destination="QVV-o9-QsU" id="Kzo-e1-NDU"/>
                         <outlet property="moreAppsCell" destination="N7E-hR-8Gn" id="sz6-al-suH"/>
                         <outlet property="privacyPolicyCell" destination="Gv9-jO-ASz" id="2JL-Fy-aFW"/>
-                        <outlet property="resetFirstOpen" destination="O27-hK-PTE" id="VHr-3c-4Gb"/>
                         <outlet property="twitterCell" destination="5Wc-c4-iIg" id="JDI-0g-Rwh"/>
                         <outlet property="usageDataSwitch" destination="E8K-Mw-PSM" id="lrN-e6-aw8"/>
                     </connections>

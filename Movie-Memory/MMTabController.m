@@ -39,7 +39,6 @@
     if (![defaults boolForKey:MMIsNotFirstOpen]) {
         [self setUpFirstView];
         // [self performSegueWithIdentifier:@"openFirstOpen" sender:self];
-        [defaults setBool:YES forKey:MMIsNotFirstOpen];
         [defaults setBool:NO forKey:MMAutoAddIsEnabled];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dismissFirstOpenViewController) name:MMDismissFirstViewNotification object:nil];
     }
@@ -191,20 +190,10 @@
 #pragma mark - First Open View Functions
 
 - (void)dismissFirstOpenViewController {
-    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:MMAlreadyOpenedAddMovie];
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:MMIsNotFirstOpen];
     [UIView animateWithDuration:0.5 animations:^{
         self.blurredView.alpha = 0;
     }];
-}
-
-- (void)removeFirstOpenViewControllerBlur:(NSNotification *)notification
-{
-    if (self.firstOpenViewController.view.superview) {
-        [self.blurredView removeFromSuperview];
-        [self.firstOpenViewController.view removeFromSuperview];
-    }
-    [self.firstOpenViewController willMoveToParentViewController:nil];
-    [self.firstOpenViewController removeFromParentViewController];
 }
 
 #pragma mark - UIAlertViewDelegate

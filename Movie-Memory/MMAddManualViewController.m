@@ -57,6 +57,9 @@
     [self.activityIndicator setHidden:YES];
     [self.indicatorBackground setHidden:YES];
     
+    // Already opened add view
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:MMAlreadyOpenedAddMovie];
+    
     // Set cover image to not change size.
     self.coverImage.contentMode = UIViewContentModeScaleAspectFit;
     
