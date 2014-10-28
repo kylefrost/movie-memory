@@ -56,7 +56,9 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     
     // NSLog(@"Did Enter Background Called");
-    [[NSUserDefaults standardUserDefaults] setBool:NO forKey:MMAlreadyOpenedAddMovie];
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:MMAutoAddIsEnabled]) {
+        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:MMAlreadyOpenedAddMovie];
+    }
     [self saveContext];
 }
 

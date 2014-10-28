@@ -341,6 +341,11 @@
     // Set the context for when the user taps to save the movie that is being created
     NSManagedObjectContext *context = [self managedObjectContext];
     
+    [self resignFirstResponder];
+    [self.titleField resignFirstResponder];
+    [self.releaseField resignFirstResponder];
+    [self.commentSection resignFirstResponder];
+    
     // Convert the cover image into NSData for saving
     NSData *coverData = UIImagePNGRepresentation(self.coverImage.image);
     

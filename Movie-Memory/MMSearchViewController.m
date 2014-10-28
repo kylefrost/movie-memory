@@ -67,8 +67,8 @@
     if ([gesture isKindOfClass:[UITapGestureRecognizer class]]) {
         // Determine the tapped point
         CGPoint touchPoint = [gesture locationInView:self.view];
-        NSUserDefaults * userDefaults = [NSUserDefaults standardUserDefaults];
-        bool pageFlag = [userDefaults boolForKey:@"pageDirectionRTLFlag"];
+        // NSUserDefaults * userDefaults = [NSUserDefaults standardUserDefaults];
+        // bool pageFlag = [userDefaults boolForKey:@"pageDirectionRTLFlag"];
         // NSLog(@"pageFlag tapbtnRight %d", pageFlag);
         
         // Get the URL of the image and set the image as the data found
