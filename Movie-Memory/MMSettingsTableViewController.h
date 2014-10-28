@@ -11,9 +11,12 @@
 
 @interface MMSettingsTableViewController : UITableViewController <UIActionSheetDelegate, MFMailComposeViewControllerDelegate>
 
-@property (weak, nonatomic) IBOutlet UITableViewCell *kyleFrostCell;
+
 @property (weak, nonatomic) IBOutlet UITableViewCell *moreAppsCell;
-@property (weak, nonatomic) IBOutlet UITableViewCell *supportCell;
+@property (weak, nonatomic) IBOutlet UITableViewCell *twitterCell;
+@property (weak, nonatomic) IBOutlet UITableViewCell *privacyPolicyCell;
+@property (weak, nonatomic) IBOutlet UITableViewCell *facebookCell;
+@property (weak, nonatomic) IBOutlet UITableViewCell *emailCell;
 
 @property (weak, nonatomic) IBOutlet UISwitch *autoAddSwitch;
 @property (weak, nonatomic) IBOutlet UISwitch *usageDataSwitch;

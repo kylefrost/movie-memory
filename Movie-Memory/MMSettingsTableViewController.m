@@ -82,52 +82,62 @@
     BOOL twitterInstalled = [[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"twitter://"]];
     BOOL twitterrificInstalled = [[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"twitterrific://"]];
     
+    BOOL facebookInstalled = [[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"fb://"]];
+    
     if ([indexPath isEqual:[tableView indexPathForCell:self.moreAppsCell]]) {
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"itms-apps://itunes.com/apps/kylefrost"]];
     }
     
-    // Decide what URL Scheme to follow when @twitter names are selected in
+    if ([indexPath isEqual:[tableView indexPathForCell:self.privacyPolicyCell]]) {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://try.crashlytics.com/terms/privacy-policy.pdf"]];
+    }
+    
+    if ([indexPath isEqual:[tableView indexPathForCell:self.facebookCell]]) {
+        if (facebookInstalled) {
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"fb://profile/141620992629122"]];
+        }
+        else {
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.facebook.com/141620992629122"]];
+        }
+    }
+    
+    if ([indexPath isEqual:[tableView indexPathForCell:self.emailCell]]) {
+        NSString *messageBody = [NSString stringWithFormat:@"\n\n%@, %@", [UIDevice currentDevice].model, [UIDevice currentDevice].systemVersion];
+        
+        MFMailComposeViewController* controller = [[MFMailComposeViewController alloc] init];
+        controller.mailComposeDelegate = self;
+        [controller setSubject:@"Movie Memory Feedback"];
+        [controller setToRecipients:[NSArray arrayWithObjects:[NSString stringWithFormat:@"support@kylefrostdesign.com"], nil]];
+        [controller setMessageBody:messageBody isHTML:NO];
+        if (controller) [self presentViewController:controller animated:YES completion:nil];
+    }
+    
+    /***** Decide what URL Scheme to follow when @twitter names are selected in *****/
     
     // Open Tweetbot
     if (tweetbotInstalled) {
-        
-        if ([indexPath isEqual:[tableView indexPathForCell:self.kyleFrostCell]]) {
-            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tweetbot:///user_profile/_kylefrost"]];
-        }
-        if ([indexPath isEqual:[tableView indexPathForCell:self.supportCell]]) {
+        if ([indexPath isEqual:[tableView indexPathForCell:self.twitterCell]]) {
             [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tweetbot:///user_profile/kylefrostdesign"]];
         }
     }
     
     // Open Twitterrific
     else if (twitterrificInstalled) {
-        
-        if ([indexPath isEqual:[tableView indexPathForCell:self.kyleFrostCell]]) {
-            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"twitterrific:///profile?screen_name=_kylefrost"]];
-        }
-        if ([indexPath isEqual:[tableView indexPathForCell:self.supportCell]]) {
+        if ([indexPath isEqual:[tableView indexPathForCell:self.twitterCell]]) {
             [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"twitterrific:///profile?screen_name=kylefrostdesign"]];
         }
     }
     
     // Open Twitter app
     else if (twitterInstalled) {
-        
-        if ([indexPath isEqual:[tableView indexPathForCell:self.kyleFrostCell]]) {
-            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"twitter:///user?screen_name=_kylefrost"]];
-        }
-        if ([indexPath isEqual:[tableView indexPathForCell:self.supportCell]]) {
+        if ([indexPath isEqual:[tableView indexPathForCell:self.twitterCell]]) {
             [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"twitter:///user?screen_name=kylefrostdesign"]];
         }
     }
     
     // Open in Safari
     else {
-        
-        if ([indexPath isEqual:[tableView indexPathForCell:self.kyleFrostCell]]) {
-            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.twitter.com/_kylefrost"]];
-        }
-        if ([indexPath isEqual:[tableView indexPathForCell:self.supportCell]]) {
+        if ([indexPath isEqual:[tableView indexPathForCell:self.twitterCell]]) {
             [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.twitter.com/kylefrostdesign"]];
         }
     }
@@ -279,17 +289,5 @@
     }
     [self dismissViewControllerAnimated:YES completion:nil];
 }
-
-/*
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
-    return cell;
-}
-*/
-
 
 @end
