@@ -232,7 +232,7 @@
         NSString *sendString = [[self.movieName lowercaseString] capitalizedString];
         controller.movieName = sendString;
         controller.isBarcode = 1;
-        NSLog(@"sendString: %@", sendString);
+        // NSLog(@"sendString: %@", sendString);
     }
 }
 

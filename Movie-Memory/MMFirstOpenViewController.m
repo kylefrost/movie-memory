@@ -53,7 +53,7 @@
 
 - (void)dismissFirstOpenViewController {
     
-    NSLog(@"Dismiss got called");
+    // NSLog(@"Dismiss got called");
     
     [UIView animateWithDuration:0.5 animations:^{
         self.tabController.blurredView.alpha = 0;

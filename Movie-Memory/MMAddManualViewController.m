@@ -199,7 +199,7 @@
     // If the view is being shown after scanning a barcode, fill in with the barcode information
     NSString *titleName = [[self.movieName lowercaseString] capitalizedString];
     self.titleField.text = titleName;
-    NSLog(@"MMAddManualViewController titleName = %@", titleName);
+    // NSLog(@"MMAddManualViewController titleName = %@", titleName);
 }
 
 -(IBAction)showButtons {
@@ -375,7 +375,7 @@
     UINavigationController *navController = [self.presentingViewController.childViewControllers objectAtIndex:0];
     UITableViewController *tableController = [navController.childViewControllers objectAtIndex:0];
     [tableController.tableView reloadData];
-    NSLog(@"%@", tableController.tableView);
+    // NSLog(@"%@", tableController.tableView);
     
     [self viewWillAppear:NO];
     

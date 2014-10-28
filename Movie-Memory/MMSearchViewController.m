@@ -69,7 +69,7 @@
         CGPoint touchPoint = [gesture locationInView:self.view];
         NSUserDefaults * userDefaults = [NSUserDefaults standardUserDefaults];
         bool pageFlag = [userDefaults boolForKey:@"pageDirectionRTLFlag"];
-        NSLog(@"pageFlag tapbtnRight %d", pageFlag);
+        // NSLog(@"pageFlag tapbtnRight %d", pageFlag);
         
         // Get the URL of the image and set the image as the data found
         NSString *imgURL = [NSString stringWithFormat:@"document.elementFromPoint(%f, %f).src", touchPoint.x, touchPoint.y];

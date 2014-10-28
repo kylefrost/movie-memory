@@ -31,7 +31,7 @@
     
     NSString *urlString = [[url host] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     
-    NSLog(@"urlString: %@", urlString);
+    // NSLog(@"urlString: %@", urlString);
     
     if ([urlString isEqualToString:@"addMovie"]) {
         [self.window.rootViewController performSegueWithIdentifier:@"addManual" sender:self.window.rootViewController];
@@ -55,7 +55,7 @@
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     
-    NSLog(@"Did Enter Background Called");
+    // NSLog(@"Did Enter Background Called");
     [[NSUserDefaults standardUserDefaults] setBool:NO forKey:MMAlreadyOpenedAddMovie];
     [self saveContext];
 }

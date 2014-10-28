@@ -18,6 +18,8 @@
 @property (weak, nonatomic) IBOutlet UITableViewCell *facebookCell;
 @property (weak, nonatomic) IBOutlet UITableViewCell *emailCell;
 
+@property (weak, nonatomic) IBOutlet UILabel *versionLabel;
+
 @property (weak, nonatomic) IBOutlet UISwitch *autoAddSwitch;
 @property (weak, nonatomic) IBOutlet UISwitch *usageDataSwitch;
 

@@ -624,7 +624,7 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="Diagnostics &amp; Usage" footerTitle="When enabled, anonymous usage data will be sent to us so we can make the app better. You can turn this off at any time." id="EDE-KO-9Be">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="6yv-XH-OUc">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="6yv-XH-OUc">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6yv-XH-OUc" id="uXd-Yv-hN0">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -702,7 +702,7 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="CONTACT" footerTitle="© 2014 Kyle Frost" id="7xz-rj-3bn">
+                            <tableViewSection headerTitle="CONTACT" id="7xz-rj-3bn">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Jz3-Zp-0lU">
                                         <rect key="frame" x="0.0" y="119" width="320" height="44"/>
@@ -778,6 +778,33 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection headerTitle="ABOUT" footerTitle="© 2014 Kyle Frost" id="Kim-Gl-f9e">
+                                <cells>
+                                    <tableViewCell userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="m9y-xe-Qkg">
+                                        <rect key="frame" x="0.0" y="119" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="m9y-xe-Qkg" id="a5q-w9-4wW">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version 0.0.0 (000)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="On0-Rp-vlL">
+                                                    <rect key="frame" x="201" y="11" width="200" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="97B-t0-lOf"/>
+                                                        <constraint firstAttribute="width" constant="200" id="INp-zO-6YL"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="centerX" secondItem="On0-Rp-vlL" secondAttribute="centerX" constant="-1" id="jR6-sO-gL5"/>
+                                                <constraint firstAttribute="centerY" secondItem="On0-Rp-vlL" secondAttribute="centerY" id="w9s-Zs-6hr"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="c9T-yl-Uau" id="gY5-ME-1G9"/>
@@ -799,6 +826,7 @@
                         <outlet property="privacyPolicyCell" destination="Gv9-jO-ASz" id="2JL-Fy-aFW"/>
                         <outlet property="twitterCell" destination="5Wc-c4-iIg" id="JDI-0g-Rwh"/>
                         <outlet property="usageDataSwitch" destination="E8K-Mw-PSM" id="lrN-e6-aw8"/>
+                        <outlet property="versionLabel" destination="On0-Rp-vlL" id="RXZ-QK-WY2"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SWm-Jf-1Xp" userLabel="First Responder" sceneMemberID="firstResponder"/>
