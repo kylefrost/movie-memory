@@ -592,7 +592,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
-                            <tableViewSection headerTitle="General" footerTitle="When enabled, the Add Movie panel will appear immediately upon open." id="SHk-dD-trb">
+                            <tableViewSection headerTitle="General" footerTitle="When enabled, the Add Movie panel will appear immediately upon each open so you can quickly add a new movie." id="SHk-dD-trb">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="nkN-eq-rXh">
                                         <rect key="frame" x="0.0" y="119" width="320" height="44"/>
@@ -624,7 +624,8 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Diagnostics &amp; Usage" footerTitle="When enabled, anonymous usage data will be sent to us so we can make the app better. You can turn this off at any time." id="EDE-KO-9Be">
+                            <tableViewSection headerTitle="Diagnostics &amp; Usage" id="EDE-KO-9Be">
+                                <string key="footerTitle">We want to make the app better. With this enabled, we get sent crash data to help do that quicker. However, you can disable this at anytime.</string>
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="6yv-XH-OUc">
                                         <autoresizingMask key="autoresizingMask"/>

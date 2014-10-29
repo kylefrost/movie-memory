@@ -189,7 +189,7 @@
     self.twitterButton.frame = CGRectMake(self.twitterButton.center.x, self.twitterButton.center.y, 80.0, 80.0);
     //self.twitterButton.center = CGPointMake(self.view.center.x + 90, self.view.center.y + 80);
     self.twitterButton.center = CGPointMake(self.view.center.x + 20, self.view.center.y + 20);
-    self.twitterButton.layer.backgroundColor = [UIColor colorWithRed:0.212 green:0.849 blue:1.000 alpha:1.000].CGColor;
+    self.twitterButton.layer.backgroundColor = [UIColor colorWithRed:0.306 green:0.592 blue:0.835 alpha:1.000].CGColor;
     self.twitterButton.layer.cornerRadius = self.twitterButton.bounds.size.width/2;
     self.twitterButton.alpha = 0.0;
     [self.twitterButton setBackgroundImage:[UIImage imageNamed:@"twitter_button_image"] forState:UIControlStateNormal];
@@ -201,7 +201,7 @@
     self.facebookButton.frame = CGRectMake(self.facebookButton.center.x, self.facebookButton.center.y, 80.0, 80.0);
     //self.facebookButton.center = CGPointMake(self.view.center.x - 90, self.view.center.y + 80);
     self.facebookButton.center = CGPointMake(self.view.center.x - 20, self.view.center.y + 20);
-    self.facebookButton.layer.backgroundColor = [UIColor colorWithRed:0.001 green:0.336 blue:1.000 alpha:1.000].CGColor;
+    self.facebookButton.layer.backgroundColor = [UIColor colorWithRed:0.180 green:0.271 blue:0.529 alpha:1.000].CGColor;
     self.facebookButton.layer.cornerRadius = self.facebookButton.bounds.size.width/2;
     self.facebookButton.alpha = 0.0;
     [self.facebookButton setBackgroundImage:[UIImage imageNamed:@"facebook_button_image"] forState:UIControlStateNormal];
@@ -213,7 +213,7 @@
     self.emailButton.frame = CGRectMake(self.emailButton.center.x, self.emailButton.center.y, 80.0, 80.0);
     //self.emailButton.center = CGPointMake(self.view.center.x, self.view.center.y - 80);
     self.emailButton.center = CGPointMake(self.view.center.x, self.view.center.y + 20);
-    self.emailButton.layer.backgroundColor = [UIColor colorWithRed:0.001 green:0.336 blue:1.000 alpha:1.000].CGColor;
+    self.emailButton.layer.backgroundColor = [UIColor colorWithRed:0.000 green:0.502 blue:1.000 alpha:1.000].CGColor;
     self.emailButton.layer.cornerRadius = self.emailButton.bounds.size.width/2;
     self.emailButton.alpha = 0.0;
     [self.emailButton setBackgroundImage:[UIImage imageNamed:@"email_button_image"] forState:UIControlStateNormal];
@@ -225,7 +225,7 @@
     self.doneButton.frame = CGRectMake(self.doneButton.center.x, self.doneButton.center.y, 20.0, 20.0);
     //self.doneButton.center = CGPointMake(self.view.center.x, self.view.center.y+25);
     self.doneButton.center = CGPointMake(self.view.center.x, self.view.center.y+25);
-    self.doneButton.layer.backgroundColor = [UIColor colorWithRed:0.001 green:0.336 blue:1.000 alpha:1.000].CGColor;
+    self.doneButton.layer.backgroundColor = [UIColor colorWithRed:0.878 green:0.122 blue:0.129 alpha:1.000].CGColor;
     self.doneButton.layer.cornerRadius = self.doneButton.bounds.size.width/3;
     self.doneButton.alpha = 0.0;
     [self.doneButton setBackgroundImage:[UIImage imageNamed:@"done_button_image"] forState:UIControlStateNormal];
@@ -279,12 +279,11 @@
 }
 
 - (void)didPressEmailButton {
-    NSString *messageBody = [NSString stringWithFormat:@"\n\n%@, %@", [UIDevice currentDevice].model, [UIDevice currentDevice].systemVersion];
+    NSString *messageBody = [NSString stringWithFormat:@""];
     
     MFMailComposeViewController* controller = [[MFMailComposeViewController alloc] init];
     controller.mailComposeDelegate = self;
-    [controller setSubject:@"Movie Memory Feedback"];
-    [controller setToRecipients:[NSArray arrayWithObjects:[NSString stringWithFormat:@"support@kylefrostdesign.com"], nil]];
+    [controller setSubject:@"Check out Movie Memory!"];
     [controller setMessageBody:messageBody isHTML:NO];
     if (controller) [self presentViewController:controller animated:YES completion:^{
         [self didPressDoneButton];
