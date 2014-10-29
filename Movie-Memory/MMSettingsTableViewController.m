@@ -7,11 +7,18 @@
 //
 
 #import "MMSettingsTableViewController.h"
+#import "FXBlurView.h"
+#import "UIDevicePlatform.h"
 #import <Social/Social.h>
 
 @interface MMSettingsTableViewController ()
 
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *resetFirstOpen;
+@property (strong, nonatomic) UIButton *twitterButton;
+@property (strong, nonatomic) UIButton *facebookButton;
+@property (strong, nonatomic) UIButton *emailButton;
+@property (strong, nonatomic) UIButton *doneButton;
+@property (strong, nonatomic) FXBlurView *blurView;
 
 @end
 
@@ -46,6 +53,19 @@
     } else {
         self.usageDataSwitch.on = NO;
     }
+    
+    [self.tableView deselectRowAtIndexPath:[self.tableView indexPathForSelectedRow] animated:YES];
+    self.clearsSelectionOnViewWillAppear = YES;
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.tableView deselectRowAtIndexPath:[self.tableView indexPathForSelectedRow] animated:YES];
 }
 
 - (IBAction)pressedResetButton:(id)sender {
@@ -105,7 +125,9 @@
     }
     
     if ([indexPath isEqual:[tableView indexPathForCell:self.emailCell]]) {
-        NSString *messageBody = [NSString stringWithFormat:@"\n\nPlease do not delete the following information, it will help us better assess your problem.\n\n%@, %@\nVersion %@ (%@)", [UIDevice currentDevice].model, [UIDevice currentDevice].systemVersion, [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"], [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"]];
+        UIDevicePlatform *platform = [[UIDevicePlatform alloc] init];
+        NSString *myDevicePlatform = [platform platformString];
+        NSString *messageBody = [NSString stringWithFormat:@"\n\nPlease do not delete the following information, it will help us better assess your problem.\n\n%@, %@\nVersion %@ (%@)", myDevicePlatform, [UIDevice currentDevice].systemVersion, [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"], [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"]];
         
         MFMailComposeViewController* controller = [[MFMailComposeViewController alloc] init];
         controller.mailComposeDelegate = self;
@@ -144,17 +166,156 @@
             [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.twitter.com/kylefrostdesign"]];
         }
     }
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 #pragma mark - Share Sheet
 
 -(IBAction)pressShare:(id)sender {
     
-    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"How are you liking Movie Memory?" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"I love it!", @"I like it.", @"It could be better.", @"I hate it.", nil];
+    // UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"How are you liking Movie Memory?" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"I love it!", @"I like it.", @"It could be better.", @"I hate it.", nil];
     
-    [actionSheet setTag:1];
-    [actionSheet showInView:self.view];
+    // [actionSheet setTag:1];
+    // [actionSheet showInView:self.view];
     
+    self.blurView = [[FXBlurView alloc] initWithFrame:self.view.frame];
+    self.blurView.alpha = 0.0;
+    self.blurView.blurRadius = 15.0;
+    self.blurView.tintColor = [UIColor clearColor];
+    [self.parentViewController.parentViewController.view addSubview:self.blurView];
+    
+    self.twitterButton = [[UIButton alloc] init];
+    self.twitterButton.frame = CGRectMake(self.twitterButton.center.x, self.twitterButton.center.y, 80.0, 80.0);
+    //self.twitterButton.center = CGPointMake(self.view.center.x + 90, self.view.center.y + 80);
+    self.twitterButton.center = CGPointMake(self.view.center.x + 20, self.view.center.y + 20);
+    self.twitterButton.layer.backgroundColor = [UIColor colorWithRed:0.212 green:0.849 blue:1.000 alpha:1.000].CGColor;
+    self.twitterButton.layer.cornerRadius = self.twitterButton.bounds.size.width/2;
+    self.twitterButton.alpha = 0.0;
+    [self.twitterButton setBackgroundImage:[UIImage imageNamed:@"twitter_button_image"] forState:UIControlStateNormal];
+    self.twitterButton.imageView.contentMode = UIViewContentModeScaleAspectFit;
+    [self.twitterButton addTarget:self action:@selector(didPressTwitterButton) forControlEvents:UIControlEventTouchUpInside];
+    [self.blurView addSubview:self.twitterButton];
+    
+    self.facebookButton = [[UIButton alloc] init];
+    self.facebookButton.frame = CGRectMake(self.facebookButton.center.x, self.facebookButton.center.y, 80.0, 80.0);
+    //self.facebookButton.center = CGPointMake(self.view.center.x - 90, self.view.center.y + 80);
+    self.facebookButton.center = CGPointMake(self.view.center.x - 20, self.view.center.y + 20);
+    self.facebookButton.layer.backgroundColor = [UIColor colorWithRed:0.001 green:0.336 blue:1.000 alpha:1.000].CGColor;
+    self.facebookButton.layer.cornerRadius = self.facebookButton.bounds.size.width/2;
+    self.facebookButton.alpha = 0.0;
+    [self.facebookButton setBackgroundImage:[UIImage imageNamed:@"facebook_button_image"] forState:UIControlStateNormal];
+    self.facebookButton.imageView.contentMode = UIViewContentModeScaleAspectFit;
+    [self.facebookButton addTarget:self action:@selector(didPressFacebookButton) forControlEvents:UIControlEventTouchUpInside];
+    [self.blurView addSubview:self.facebookButton];
+    
+    self.emailButton = [[UIButton alloc] init];
+    self.emailButton.frame = CGRectMake(self.emailButton.center.x, self.emailButton.center.y, 80.0, 80.0);
+    //self.emailButton.center = CGPointMake(self.view.center.x, self.view.center.y - 80);
+    self.emailButton.center = CGPointMake(self.view.center.x, self.view.center.y + 20);
+    self.emailButton.layer.backgroundColor = [UIColor colorWithRed:0.001 green:0.336 blue:1.000 alpha:1.000].CGColor;
+    self.emailButton.layer.cornerRadius = self.emailButton.bounds.size.width/2;
+    self.emailButton.alpha = 0.0;
+    [self.emailButton setBackgroundImage:[UIImage imageNamed:@"email_button_image"] forState:UIControlStateNormal];
+    self.emailButton.imageView.contentMode = UIViewContentModeScaleAspectFit;
+    [self.emailButton addTarget:self action:@selector(didPressEmailButton) forControlEvents:UIControlEventTouchUpInside];
+    [self.blurView addSubview:self.emailButton];
+    
+    self.doneButton = [[UIButton alloc] init];
+    self.doneButton.frame = CGRectMake(self.doneButton.center.x, self.doneButton.center.y, 20.0, 20.0);
+    //self.doneButton.center = CGPointMake(self.view.center.x, self.view.center.y+25);
+    self.doneButton.center = CGPointMake(self.view.center.x, self.view.center.y+25);
+    self.doneButton.layer.backgroundColor = [UIColor colorWithRed:0.001 green:0.336 blue:1.000 alpha:1.000].CGColor;
+    self.doneButton.layer.cornerRadius = self.doneButton.bounds.size.width/3;
+    self.doneButton.alpha = 0.0;
+    [self.doneButton setBackgroundImage:[UIImage imageNamed:@"done_button_image"] forState:UIControlStateNormal];
+    self.doneButton.imageView.contentMode = UIViewContentModeScaleAspectFit;
+    [self.doneButton addTarget:self action:@selector(didPressDoneButton) forControlEvents:UIControlEventTouchUpInside];
+    [self.blurView addSubview:self.doneButton];
+    
+    [UIView animateWithDuration:0.3 animations:^{
+
+        self.blurView.alpha = 1.0;
+        self.twitterButton.alpha = 1.0;
+        self.facebookButton.alpha = 1.0;
+        self.emailButton.alpha = 1.0;
+        self.doneButton.alpha = 1.0;
+        
+    }];
+    
+    [UIView animateWithDuration:1.2 delay:0.0 usingSpringWithDamping:0.6 initialSpringVelocity:1.0 options:UIViewAnimationOptionAllowAnimatedContent animations:^{
+        
+        self.twitterButton.center = CGPointMake(self.view.center.x + 90, self.view.center.y + 80);
+        //self.twitterButton.layer.cornerRadius = self.twitterButton.bounds.size.width/2;
+        
+        self.facebookButton.center = CGPointMake(self.view.center.x - 90, self.view.center.y + 80);
+        //self.facebookButton.layer.cornerRadius = self.facebookButton.bounds.size.width/2;
+        
+        self.emailButton.center = CGPointMake(self.view.center.x, self.view.center.y - 80);
+        //self.emailButton.layer.cornerRadius = self.emailButton.bounds.size.width/2;
+        
+        self.doneButton.frame = CGRectMake(self.doneButton.center.x, self.doneButton.center.y, 60.0, 60.0);
+        self.doneButton.center = CGPointMake(self.view.center.x, self.view.center.y+25);
+        self.doneButton.layer.cornerRadius = self.doneButton.bounds.size.width/2;
+    } completion:nil];
+}
+
+- (void)didPressTwitterButton {
+    SLComposeViewController *tweetSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
+    [tweetSheet setInitialText:@"I'm loving Movie Memory by @KyleFrostDesign! Check it out! #moviememory"];
+    
+    [self presentViewController:tweetSheet animated:YES completion:^{
+        [self didPressDoneButton];
+    }];
+}
+
+- (void)didPressFacebookButton {
+    SLComposeViewController *shareSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+    [shareSheet setInitialText:@"I'm loving Movie Memory! Check it out! #moviememory"];
+    
+    [self presentViewController:shareSheet animated:YES completion:^{
+        [self didPressDoneButton];
+    }];
+}
+
+- (void)didPressEmailButton {
+    NSString *messageBody = [NSString stringWithFormat:@"\n\n%@, %@", [UIDevice currentDevice].model, [UIDevice currentDevice].systemVersion];
+    
+    MFMailComposeViewController* controller = [[MFMailComposeViewController alloc] init];
+    controller.mailComposeDelegate = self;
+    [controller setSubject:@"Movie Memory Feedback"];
+    [controller setToRecipients:[NSArray arrayWithObjects:[NSString stringWithFormat:@"support@kylefrostdesign.com"], nil]];
+    [controller setMessageBody:messageBody isHTML:NO];
+    if (controller) [self presentViewController:controller animated:YES completion:^{
+        [self didPressDoneButton];
+    }];
+}
+
+- (void)didPressDoneButton {
+    [UIView animateWithDuration:0.3 animations:^{
+        
+        self.blurView.alpha = 0.0;
+        self.twitterButton.alpha = 0.0;
+        self.facebookButton.alpha = 0.0;
+        self.emailButton.alpha = 0.0;
+        self.doneButton.alpha = 1.0;
+        
+    }];
+    
+    [UIView animateWithDuration:1.2 delay:0.0 usingSpringWithDamping:0.6 initialSpringVelocity:1.0 options:UIViewAnimationOptionAllowAnimatedContent animations:^{
+        
+        self.twitterButton.center = CGPointMake(self.view.center.x, self.view.center.y);
+        //self.twitterButton.layer.cornerRadius = self.twitterButton.bounds.size.width/2;
+        
+        self.facebookButton.center = CGPointMake(self.view.center.x, self.view.center.y);
+        //self.facebookButton.layer.cornerRadius = self.facebookButton.bounds.size.width/2;
+        
+        self.emailButton.center = CGPointMake(self.view.center.x, self.view.center.y);
+        //self.emailButton.layer.cornerRadius = self.emailButton.bounds.size.width/2;
+        
+        self.doneButton.frame = CGRectMake(self.doneButton.center.x, self.doneButton.center.y, 20.0, 20.0);
+        self.doneButton.center = CGPointMake(self.view.center.x, self.view.center.y+25);
+    } completion:nil];
 }
 
 -(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
@@ -195,7 +356,7 @@
         if (buttonIndex == 0) {
             
             SLComposeViewController *tweetSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
-            [tweetSheet setInitialText:@"I'm loving #MovieMemory by @KyleFrostDesign! Check it out! #moviememory"];
+            [tweetSheet setInitialText:@"I'm loving Movie Memory by @KyleFrostDesign! Check it out! #moviememory"];
             
             [self presentViewController:tweetSheet animated:YES completion:nil];
         }

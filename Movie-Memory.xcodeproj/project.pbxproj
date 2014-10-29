@@ -55,6 +55,7 @@
 		27BD9001197B1FBE00D8C251 /* FXBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27BD9000197B1FBE00D8C251 /* FXBlurView.m */; };
 		27BD9004197B20BA00D8C251 /* MMFirstOpenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27BD9003197B20BA00D8C251 /* MMFirstOpenViewController.m */; };
 		27BD9007197B256A00D8C251 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27BD9006197B256A00D8C251 /* Crashlytics.framework */; };
+		27BF6A121A00551600F4D476 /* UIDevicePlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = 27BF6A111A00551600F4D476 /* UIDevicePlatform.m */; };
 		27DEDC51193523AB00C1C629 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27DEDC50193523AB00C1C629 /* AVFoundation.framework */; };
 		27DEDC53193523B200C1C629 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27DEDC52193523B200C1C629 /* QuartzCore.framework */; };
 		27DEDC56193523EC00C1C629 /* MMScanBarcodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DEDC55193523EC00C1C629 /* MMScanBarcodeViewController.m */; };
@@ -194,6 +195,8 @@
 		27BD9002197B20BA00D8C251 /* MMFirstOpenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMFirstOpenViewController.h; sourceTree = "<group>"; };
 		27BD9003197B20BA00D8C251 /* MMFirstOpenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMFirstOpenViewController.m; sourceTree = "<group>"; };
 		27BD9006197B256A00D8C251 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		27BF6A101A00551600F4D476 /* UIDevicePlatform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIDevicePlatform.h; sourceTree = "<group>"; };
+		27BF6A111A00551600F4D476 /* UIDevicePlatform.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIDevicePlatform.m; sourceTree = "<group>"; };
 		27DEDC50193523AB00C1C629 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		27DEDC52193523B200C1C629 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		27DEDC54193523EC00C1C629 /* MMScanBarcodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMScanBarcodeViewController.h; sourceTree = "<group>"; };
@@ -312,6 +315,8 @@
 				2799CF5C19819AB50058308B /* UIColor+Custom.m */,
 				2720DC7819F9C8300036298C /* MMConstants.h */,
 				2720DC7919F9C8300036298C /* MMConstants.m */,
+				27BF6A101A00551600F4D476 /* UIDevicePlatform.h */,
+				27BF6A111A00551600F4D476 /* UIDevicePlatform.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -825,6 +830,7 @@
 				2792E18919311BEA001FCE59 /* MMTableViewCell.m in Sources */,
 				2799CF631981B16B0058308B /* MMFirstOpenOneViewController.m in Sources */,
 				27BD8FFD197B1F3A00D8C251 /* MMFadeInSegue.m in Sources */,
+				27BF6A121A00551600F4D476 /* UIDevicePlatform.m in Sources */,
 				2720DC7A19F9C8300036298C /* MMConstants.m in Sources */,
 				27E124DC19304F7A0081A218 /* MMWatchedViewController.m in Sources */,
 				27AB0B841935199100620A01 /* AFSecurityPolicy.m in Sources */,

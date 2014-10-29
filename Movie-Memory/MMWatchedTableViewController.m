@@ -71,12 +71,14 @@
             // Send user to movie info page that is selected
             indexPath = [self.searchDisplayController.searchResultsTableView indexPathForSelectedRow];
             selectedMovie = [searchResults objectAtIndex:indexPath.row];
+            [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
         }
         // If user is just in normal view (i.e. not is search), do this
         else {
             // Send user to movie info page that is selected
             indexPath = [self.tableView indexPathForSelectedRow];
             selectedMovie = [_movies objectAtIndex:indexPath.row];
+            [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
         }
         
         // Set the destination as the selected movie and open the movie
@@ -103,10 +105,10 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated {
-    
+    [super viewWillAppear:animated];
     // Run ViewDidAppear in order to update information in TableView before the user sees the view
     [self updateTableView];
-    
+    [self.tableView deselectRowAtIndexPath:[self.tableView indexPathForSelectedRow] animated:YES];
     // If there aren't any movies, don't show the edit button
 }
 

@@ -395,10 +395,12 @@
     [self.view addSubview:self.blurView];
     [self.activityIndicator startAnimating];
     [self.activityIndicator setHidden:NO];
+    self.activityIndicator.alpha = 0.0;
     self.indicatorBackground.layer.backgroundColor = [UIColor blackColor].CGColor;
     self.indicatorBackground.layer.opacity = 0.5f;
     self.indicatorBackground.layer.cornerRadius = self.indicatorBackground.bounds.size.width/2;
     [self.indicatorBackground setHidden:NO];
+    self.indicatorBackground.alpha = 0.0;
     [self.view bringSubviewToFront:self.indicatorBackground];
     [self.view bringSubviewToFront:self.activityIndicator];
     [self resignFirstResponder];
@@ -415,6 +417,8 @@
     
     [UIView animateWithDuration:0.2 animations:^{
         self.blurView.alpha = 1.0;
+        self.indicatorBackground.alpha = 0.8;
+        self.activityIndicator.alpha = 1.0;
     }];
     
     [NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(showCheckmark) userInfo:nil repeats:NO];
