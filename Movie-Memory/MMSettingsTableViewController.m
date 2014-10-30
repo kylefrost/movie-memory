@@ -313,6 +313,7 @@
         //self.emailButton.layer.cornerRadius = self.emailButton.bounds.size.width/2;
         
         self.doneButton.frame = CGRectMake(self.doneButton.center.x, self.doneButton.center.y, 20.0, 20.0);
+        self.doneButton.imageView.contentMode = UIViewContentModeScaleAspectFit;
         self.doneButton.center = CGPointMake(self.view.center.x, self.view.center.y+25);
     } completion:nil];
 }
